@@ -1,0 +1,107 @@
+.login-page {
+    display: flex;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    text-align: center;
+    justify-content: center;
+}
+
+.left-section {
+    flex: 2;
+}
+
+.right-section {
+    flex: 1;
+    background-color: #0fffff;
+    min-height: 100%; /* Set a minimum height of 100% */
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    margin: 0 20px;
+}
+
+.left-heading {
+    text-align: left;
+    margin: 20px;
+}
+
+.top-margin {
+    margin-top: 15%; /* Added margin only above the h1 */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+input[type="email"], input[type="password"] {
+    width: 618px;
+    height: 48px;
+    background-color: #f5f5f5; /* Light gray */
+    border: none;
+    border-radius: 12px;
+    padding: 15px; /* Adjust padding as needed */
+    margin-bottom: 30px; /* Add some space between the inputs */
+    font-size: 18px;
+}
+
+button {
+    width: 227px;
+    height: 49px;
+    background-color: #FFEEFD; /* Light pink */
+    border: none;
+    border-radius: 27px;
+    color: #B232A6; /* Purple */
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ED82FF;
+    margin: 0 30px;
+}
+
+.or {
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-section {
+        display: none;
+    }
+
+    .left-section {
+        flex: none;
+    }
+
+    .logo-container {
+        margin-top: 30px;
+    }
+
+    input[type="email"], input[type="password"], button {
+        width: 100%;
+        max-width: none;
+    }
+}

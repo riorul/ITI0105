@@ -1,15 +1,12 @@
-import './App.css';
+import React from 'react';
+import Login from "./pages/Login";
 
-function MyButton() {
-    return (
-        <button>I'm a button</button>
-    );
-}
-export default function MyApp() {
+function App () {
     return (
         <div>
-            <h1>Welcome to my app</h1>
-            <MyButton />
+            <Login/>
         </div>
-    );
+    )
 }
+
+export default App;
