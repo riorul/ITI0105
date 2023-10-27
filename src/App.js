@@ -1,15 +1,28 @@
-import './App.css';
+import React, { useState } from 'react';
+import LoginPage from './pages/LoginPage'; // Import your LoginPage component
+import MainPage from './pages/MainPage'; // Import your MainPage component
 
-function MyButton() {
-    return (
-        <button>I'm a button</button>
-    );
-}
-export default function MyApp() {
+const App = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const handleLogin = (email, password) => {
+        console.log('handleLogin called');
+        if (email === "rivo@gmail.com" && password === "1234") {
+            setIsLoggedIn(true);
+        } else {
+            alert("Invalid credentials");
+        }
+    };
+
     return (
         <div>
-            <h1>Welcome to my app</h1>
-            <MyButton />
+            {isLoggedIn ? (
+                <MainPage />
+            ) : (
+                <LoginPage onLogin={handleLogin} />
+            )}
         </div>
     );
-}
+};
+
+export default App;
