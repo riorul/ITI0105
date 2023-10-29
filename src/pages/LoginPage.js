@@ -5,7 +5,7 @@ import { ReactComponent as FacebookLogo} from "../assets/facebook.svg"
 import { ReactComponent as GoogleLogo} from "../assets/google.svg"
 import { ReactComponent as FigmaLogo} from "../assets/figma.svg"
 
-const LoginPage = ({ onLogin }) => {
+const LoginPage = ({ onLogin, onWantsToRegister }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -13,6 +13,9 @@ const LoginPage = ({ onLogin }) => {
         e.preventDefault();
         onLogin(email, password);
     };
+    const handleWantsToRegister = () => {
+        onWantsToRegister(true)
+    }
 
     const { height, width } = useWindowDimensions();
 
@@ -87,7 +90,7 @@ const LoginPage = ({ onLogin }) => {
                 <div className="sign-up">
                     <h1>UUS?</h1>
                     <h3>Registeeri ja avasta tennise võlud!</h3>
-                    <button type="submit">Registeeri</button>
+                    <button onClick={handleWantsToRegister} type="submit">Registeeri</button>
                 </div>
             </div>
         </div>
