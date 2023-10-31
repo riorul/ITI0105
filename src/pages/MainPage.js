@@ -29,3 +29,4 @@ const MainPage = ({ onLogout }) => {
 };
 
 export default MainPage;
+
