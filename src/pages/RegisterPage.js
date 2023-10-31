@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import useWindowDimensions from "./windowDimensions";
 
-const RegisterPage = ({onRegister}) =>{
+const RegisterPage = ({onRegister}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
+    const [registeredUsers, setRegisteredUsers] = useState([]); // State to store registered users
 
     const handleSubmit = (e) => {
         e.preventDefault();
