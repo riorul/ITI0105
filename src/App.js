@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import LoginPage from './pages/LoginPage'; // Import your LoginPage component
 import MainPage from './pages/MainPage'; // Import your MainPage component
 import RegisterPage from './pages/RegisterPage';
+import BroneerimisPage from "./pages/BroneerimisPage";
 
 const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,7 +29,7 @@ const App = () => {
     return (
         <div>
             {isLoggedIn ? (
-                <MainPage />
+                <BroneerimisPage />
             ) : wantsToRegister ? (
                 <RegisterPage onRegister={handleRegister}/>
             ) : (
