@@ -1,23 +1,25 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Login.css"
-import useWindowDimensions from "./windowDimensions";
 import { ReactComponent as FacebookLogo} from "../assets/facebook.svg"
 import { ReactComponent as GoogleLogo} from "../assets/google.svg"
 import { ReactComponent as FigmaLogo} from "../assets/figma.svg"
 
-const LoginPage = ({ onLogin, onWantsToRegister }) => {
+const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        onLogin(email, password);
+    const handleLogin = () => {
+        if (email === 'rivo@gmail.com' && password === '1234') {
+            navigate('/');
+        } else {
+            alert('Invalid username or password');
+        }
     };
     const handleWantsToRegister = () => {
-        onWantsToRegister(true)
+        navigate('/register');
     }
-
-    const { height, width } = useWindowDimensions();
 
     return (
         <div className="login-page">
@@ -27,7 +29,8 @@ const LoginPage = ({ onLogin, onWantsToRegister }) => {
                     <h1 className="top-margin">Logi sisse oma kontosse</h1>
                     <h3>Logi sisse kasutades</h3>
                     <div className="logo-container">
-                        {/* The target="_blank" attribute opens the link in a new tab, and rel="noopener noreferrer" is a security measure when opening links in a new tab. */}
+                        {/* The target="_blank" attribute opens the link in a new tab, and rel="noopener noreferrer"
+                        is a security measure when opening links in a new tab. */}
                         <a href="https://accounts.google.com/" target="_blank" rel="noopener noreferrer">
                             <GoogleLogo className="logo"/>
                         </a>
@@ -44,7 +47,7 @@ const LoginPage = ({ onLogin, onWantsToRegister }) => {
                     <div className="or">või</div>
                     <div className="line"></div>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleLogin}>
                     <div>
                         <div>
 
