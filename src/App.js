@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import LoginPage from './pages/LoginPage'; // Import your LoginPage component
 import MainPage from './pages/MainPage'; // Import your MainPage component
 import RegisterPage from './pages/RegisterPage';
+import BroneerimisPage from "./pages/BroneerimisPage";
 
 const App = () => {
 
