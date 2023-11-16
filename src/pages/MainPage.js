@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from '../components/Header';
 
 const MainPage = ({ onLogout }) => {
     const [loggedIn, setLoggedIn] = useState(true);
@@ -11,19 +12,10 @@ const MainPage = ({ onLogout }) => {
     };
 
     return (
+
+
         <div>
-            {loggedIn ? (
-                <div>
-                    <h1>Main Page</h1>
-                    <p>Welcome to the main page of your application.</p>
-                    <button onClick={handleLogout}>Logout</button>
-                </div>
-            ) : (
-                <div>
-                    <h1>Logged Out</h1>
-                    <p>You've been logged out.</p>
-                </div>
-            )}
+            <Header />
         </div>
     );
 };
