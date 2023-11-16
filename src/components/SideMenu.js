@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './SideMenu.css';
 import { useNavigate } from 'react-router-dom';
 import defaultImage from '../assets/profile.png';
 
 const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
     const navigate = useNavigate();
+    const sideMenuRef = useRef();
+
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (sideMenuRef.current && !sideMenuRef.current.contains(event.target)) {
+                onClose();
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('click', handleOutsideClick);
+        }
+
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, [isOpen, onClose]);
 
     return (
-        <div className={`side-menu ${isOpen ? 'open' : ''}`}>
+        <div ref={sideMenuRef} className={`side-menu ${isOpen ? 'open' : ''}`}>
             <div className="profile-picture">
                 <img
                     src={defaultImage}
@@ -15,6 +32,7 @@ const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
                     onError={(e) => {
                         e.target.src = defaultImage;
                     }}
+                    onClick={() => navigate("/profiil")}
                 />
             </div>
 
@@ -23,7 +41,7 @@ const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
             </div>
 
             <div className="navigation-side-menu">
-                <div className="side-menu-buttons-container">
+                <div>
                     <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/broneeri")}>
                         Broneeri
                     </div>
@@ -37,17 +55,12 @@ const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
                         Treeningpartner
                     </div>
                 </div>
-                <div className="side-menu-buttons-container">
+                <div>
                     <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/seaded")}>
                         Seaded
                     </div>
                     <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/tagasiside")}>
                         Tagasiside
-                    </div>
-
-                    {/* Close Menu */}
-                    <div className="clickable-area side-menu-buttons text-container" onClick={onClose}>
-                        Sulge menüü
                     </div>
                 </div>
             </div>

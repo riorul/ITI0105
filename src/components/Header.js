@@ -32,6 +32,7 @@ const Header = () => {
         setMenuOpen(!isMenuOpen);
     };
 
+
     return (
         <header>
             <svg
@@ -52,9 +53,13 @@ const Header = () => {
                 </defs>
             </svg>
 
-            <img src={MenuSVG} alt="Menu Icon" className="menu-svg" onClick={toggleMenu} />
+            <img src={MenuSVG} alt="Menu Icon" className="menu-svg"
+                 onClick={(e) => {
+                    e.stopPropagation();
+                    toggleMenu();
+            }} />
 
-            <SideMenu isOpen={isMenuOpen} onClose={toggleMenu} userName={username} />
+            <SideMenu isOpen={isMenuOpen} onClose={toggleMenu} userName={username}/>
 
 
             <div className="search-container">

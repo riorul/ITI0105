@@ -3,9 +3,13 @@
     top: 0;
     left: -25%; /* Initially off-screen to the left */
     width: 25%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(to right, #5C23FFFF -30%,  #B684F4FF 55%, #B684F400 100%);
     transition: left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .side-menu.open {
@@ -13,10 +17,12 @@
 }
 
 .profile-picture {
+    display: flex;
+    align-items: flex-start;
     margin-left: 15px;
     margin-top: 15px;
-    width: 20vh;
-    height: 20vh;
+    height: 38vh;
+    aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -46,9 +52,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 3vh 0;
+    height: 100%;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 }
 
-.side-menu-buttons-container {
-    margin-bottom: 8vh;
-}
