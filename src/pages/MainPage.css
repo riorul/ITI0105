@@ -1,0 +1,38 @@
+.image-container {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+.info-container {
+    margin-top: 12vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info-text {
+    align-items: center;
+}
+
+.section {
+    text-align: center;
+}
+
+.italic-paragraph {
+    font-style: italic;
+}
+
+.introduction-container {
+    align-items: center;
+    display: flex;
+}
+
+.intro-image-container {
+
+    max-width: 100%
+}
