@@ -6,16 +6,17 @@
 .magnifier-svg,
 .menu-svg {
     top: 10px;
-    width: 5vw;
     height: auto;
 }
 
 .menu-svg {
     position: absolute;
+    width: 4vw;
     left: 10px;
 }
 
 .magnifier-svg {
+    width: 3vw;
     right: 10px;
 }
 
@@ -26,10 +27,10 @@
     right: 10px;
 }
 
-.language-buttons {
+.header-buttons {
     display: flex;
     justify-content: center;
-    font-size: 3vw;
+    font-size: 2vw;
     color: white;
 }
 

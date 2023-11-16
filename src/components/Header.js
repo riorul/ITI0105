@@ -7,7 +7,7 @@ import SideMenu from './SideMenu';
 const Header = () => {
     const [isSearchHovered, setIsSearchHovered] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
-
+    const username = "Rivo";
     const handleSearchClick = () => {
         console.log('SEARCH clicked');
     };
@@ -54,7 +54,7 @@ const Header = () => {
 
             <img src={MenuSVG} alt="Menu Icon" className="menu-svg" onClick={toggleMenu} />
 
-            <SideMenu isOpen={isMenuOpen} onClose={toggleMenu} />
+            <SideMenu isOpen={isMenuOpen} onClose={toggleMenu} userName={username} />
 
 
             <div className="search-container">
@@ -66,7 +66,7 @@ const Header = () => {
                 >
                     <MagnifierSVG hovered={isSearchHovered} />
                 </div>
-                <div className="language-buttons">
+                <div className="header-buttons">
                     <div className={`clickable-area ${isSearchHovered ? 'search-hovered' : ''}`} onClick={handleSearchClick} onMouseEnter={handleSearchHover} onMouseLeave={handleSearchLeave}>
                         SEARCH
                     </div>
