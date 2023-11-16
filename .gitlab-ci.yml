@@ -5,17 +5,17 @@ deploy_job:
   stage: deploy
   script:
     - if [ "$CI_COMMIT_BRANCH" == "main" ]; then
-      # Set Git configuration for the CI user
-      git config --global user.email "$GITLAB_USER_EMAIL";
-      git config --global user.name "$GITLAB_USER_NAME";
-      
-      # Add GitHub repository as a remote
-      git remote add github https://github.com/riorul/ITI0105.git;
-      
-      # Push changes to GitHub main branch
-      git push github main;
+        # Set Git configuration for the CI user
+        git config --global user.email "$GITLAB_USER_EMAIL";
+        git config --global user.name "$GITLAB_USER_NAME";
+        
+        # Add GitHub repository as a remote
+        git remote add github https://github.com/riorul/ITI0105.git;
+        
+        # Push changes to GitHub main branch
+        git push github main;
       else
-      echo "Skipping deployment as changes were not made to the main branch.";
+        echo "Skipping deployment as changes were not made to the main branch.";
       fi
   only:
     - main
