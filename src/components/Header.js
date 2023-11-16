@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import "./Header.css"
 import MenuSVG from '../assets/menu.svg';
 import MagnifierSVG from '../assets/MagnifierSVG';
+import SideMenu from './SideMenu';
 
 const Header = () => {
     const [isSearchHovered, setIsSearchHovered] = useState(false);
+    const [isMenuOpen, setMenuOpen] = useState(false);
 
     const handleSearchClick = () => {
         console.log('SEARCH clicked');
@@ -24,6 +26,10 @@ const Header = () => {
 
     const handleEngClick = () => {
         console.log('ENG clicked');
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
     };
 
     return (
@@ -46,7 +52,10 @@ const Header = () => {
                 </defs>
             </svg>
 
-            <img src={MenuSVG} alt="Menu Icon" className="menu-svg" />
+            <img src={MenuSVG} alt="Menu Icon" className="menu-svg" onClick={toggleMenu} />
+
+            <SideMenu isOpen={isMenuOpen} onClose={toggleMenu} />
+
 
             <div className="search-container">
                 <div
