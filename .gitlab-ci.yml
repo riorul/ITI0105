@@ -6,16 +6,11 @@ deploy_job:
   script:
     - |
       if [ "$CI_COMMIT_BRANCH" == "main" ]; then
+        git checkout -b main
         git fetch
         git config --global user.email "$GITLAB_USER_EMAIL"
         git config --global user.name "$GITLAB_USER_NAME"
-
-        if ! git remote | grep -q '^github$'; then
-          git remote add github https://github.com/riorul/ITI0105.git
-        else
-          git remote set-url github https://github.com/riorul/ITI0105.git
-        fi
-
+        git remote add github https://github.com/riorul/ITI0105.git
         git push github main
       else
         echo "Skipping deployment as changes were not made to the main branch."
