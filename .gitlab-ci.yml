@@ -9,6 +9,7 @@ deploy_job:
         git fetch
         git config --global user.email "$GITLAB_USER_EMAIL"
         git config --global user.name "$GITLAB_USER_NAME"
+        git remote rm origin
         git remote add github https://github.com/riorul/ITI0105.git
         git push github main
       else
