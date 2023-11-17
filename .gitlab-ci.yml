@@ -4,7 +4,7 @@ stages:
 deploy_to_github:
   stage: deploy
   script:
-    - git clone https://github.com/riorul/ITI0105.git
+    - git clone https://riorul@github.com/riorul/ITI0105.git
     - cd your-github-repo
     - git config --global user.email "$GITLAB_USER_EMAIL"
     - git config --global user.name "$GITLAB_USER_NAME"
