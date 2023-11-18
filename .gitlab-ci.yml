@@ -4,13 +4,17 @@ stages:
 deploy_to_github:
   stage: deploy
   script:
-    - git clone https://riorul@github.com/riorul/ITI0105.git
-    - cd your-github-repo
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan github.com >> ~/.ssh/known_hosts
+    - git clone git@github.com:riorul/ITI0105.git
+    - cd ITI0105
     - git config --global user.email "$GITLAB_USER_EMAIL"
     - git config --global user.name "$GITLAB_USER_NAME"
-    - git checkout main
+    - # Make any necessary changes or updates
     - git add .
     - git commit -m "Update from GitLab CI/CD"
-    - git push https://$GITHUB_TOKEN@github.com/riorul/ITI0105.git main
+    - git push origin main
   only:
     - main
