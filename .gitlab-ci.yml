@@ -9,7 +9,6 @@ deploy_to_github:
   script:
     - git remote rm github || true
     - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/riorul/ITI0105.git
-    - git fetch --unshallow github
-    - git push -f --no-thin github main
+    - git push -f github main
   only:
     - main
