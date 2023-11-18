@@ -12,6 +12,6 @@ deploy_to_github:
     - git fetch github
     - git checkout main
     - git rebase github/main
-    - git push github main
+    - git push -f github main
   only:
     - main
