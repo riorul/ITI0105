@@ -6,7 +6,7 @@ deploy_to_github:
   script:
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
-    - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/username/repo.git
+    - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/riorul/ITI0105.git
     - git checkout main
     - git pull origin main
     - git push github main
