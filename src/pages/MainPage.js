@@ -6,6 +6,7 @@ import './MainPage.css';
 import { ReactComponent as ContactSVG} from "../assets/home/contact.svg"
 import { ReactComponent as AddSVG} from "../assets/home/plussign.svg"
 import { ReactComponent as QuestionSVG} from "../assets/home/questionmark.svg"
+import React from "react";
 const MainPage = () => {
 
     return (
@@ -45,8 +46,8 @@ const MainPage = () => {
                 </div>
             </div>
 
-            <div>
-                <div className="introduction-container">
+            <div className="introduction-container">
+                <div className="intro-content">
                     <h4>Staadionid</h4>
                     <p>
                         Avage oma tennisepotentsiaal meie tipptasemel väljakutel. Olenemata sellest,
@@ -56,16 +57,59 @@ const MainPage = () => {
                     </p>
                 </div>
 
-                <div>
-                    <div className="intro-image-container">
-                        <img
-                            src={introFirstImage} // Replace with the actual URL of your image
-                            alt="Description of the image"
-                            className="responsive-image"
-                        />
-                    </div>
+                <div className="intro-image-container">
+                    <img
+                        src={introFirstImage} // Replace with the actual URL of your image
+                        alt="Description of the image"
+                        className="responsive-image"
+                    />
                 </div>
             </div>
+            <div className="line line-with-margin"></div>
+
+            <div className="introduction-container">
+
+                <div className="intro-image-container">
+                    <img
+                        src={introFirstImage} // Replace with the actual URL of your image
+                        alt="Description of the image"
+                        className="responsive-image"
+                    />
+                </div>
+
+                <div className="intro-content">
+                    <h4>Staadionid</h4>
+                    <p>
+                        Avage oma tennisepotentsiaal meie tipptasemel väljakutel. Olenemata sellest,
+                        kas olete algaja või kogenud mängija, meie staadionid on loodud teie mängu
+                        parimaks naudinguks. Valige aeg ja kindlustage oma koht.
+                        Arenda ennast – broneeri oma väljak kohe!
+                    </p>
+                </div>
+            </div>
+            <div className="line line-with-margin"></div>
+
+            <div className="introduction-container">
+                <div className="intro-content">
+                    <h4>Staadionid</h4>
+                    <p>
+                        Avage oma tennisepotentsiaal meie tipptasemel väljakutel. Olenemata sellest,
+                        kas olete algaja või kogenud mängija, meie staadionid on loodud teie mängu
+                        parimaks naudinguks. Valige aeg ja kindlustage oma koht.
+                        Arenda ennast – broneeri oma väljak kohe!
+                    </p>
+                </div>
+
+                <div className="intro-image-container">
+                    <img
+                        src={introFirstImage} // Replace with the actual URL of your image
+                        alt="Description of the image"
+                        className="responsive-image"
+                    />
+                </div>
+            </div>
+
+
         </div>
     );
 };

@@ -10,7 +10,7 @@
 }
 
 .info-container {
-    margin-top: 12vh;
+    margin: 12vh 0;
     display: flex;
     justify-content: space-evenly;
 }
@@ -27,12 +27,30 @@
     font-style: italic;
 }
 
+
 .introduction-container {
-    align-items: center;
+    align-items: flex-start;
+    padding: 0 10%;
     display: flex;
+    justify-content: space-around;
 }
 
-.intro-image-container {
+.intro-content p {
+    text-align: justify;
+}
 
-    max-width: 100%
+.intro-content h4 {
+    text-align: left;
+    margin: 0;
+}
+
+.intro-content,
+.intro-image-container{
+    flex: 1;
+    max-width: 47%;
+}
+
+
+.line-with-margin {
+    margin: 60px 8%;
 }
