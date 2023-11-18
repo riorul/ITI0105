@@ -9,8 +9,9 @@ deploy_to_github:
   script:
     - git remote rm github || true
     - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/riorul/ITI0105.git
-    - git repack -a -d --depth=250 --window=250
-    - git fsck --full
+    - git fetch github
+    - git checkout main
+    - git pull --rebase github/main || git rebase --abort
     - git push -f github main
   only:
     - main
