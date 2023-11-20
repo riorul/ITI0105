@@ -1,4 +1,24 @@
-table, th, td {
+table, th, td{
     border: 1px solid #B232A6;
     border-collapse: collapse;
+    width: 1080px;
+    text-align: center;
+}
+
+button1 {
+    width: 1080px;
+    height: 50px;
+    background-color: greenyellow; /* Light pink */
+    border: none;
+    border-radius: 27px;
+    color: black; /* Purple */
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+broneeritud {
+    color: white;
+    background-color: lightcoral;
 }
