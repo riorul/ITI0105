@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./BroneerimisPage.css"
 const BroneerimisPage = () => {
     return (
         <div>
@@ -21,6 +21,31 @@ const BroneerimisPage = () => {
                             <a href="https://laagritennis.ee/broneeri/" target="_blank">Klubi 4</a>
                         </th>
                     </tr>
+                </tbody>
+            </table>
+            <br></br>
+            <table>
+                <tbody>
+                <tr>
+                    <th> </th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <td>8:00</td>
+                    <td>Broneeritud</td>
+                    <td>Broneeritud</td>
+                    <td>Broneeritud</td>
+                    <td>Broneeritud</td>
+                    <td>Broneeritud</td>
+                    <td>Broneeritud</td>
+                    <td>Broneeritud</td>
+                </tr>
                 </tbody>
             </table>
         </div>
