@@ -6,7 +6,7 @@ const BroneerimisPage = () => {
     return (
         <div>
             <h1 align="center">Broneerimine</h1>
-            <p align="center">Welcome to Klubi1!</p>
+            <p align="center">Welcome to Klubi2!</p>
             <p align="center">
                 <a href={MainPage} targer={"_blank"}>
                     <button>Avalehele tagasi!</button>
@@ -15,10 +15,10 @@ const BroneerimisPage = () => {
             <table align="center">
                 <tbody>
                     <tr>
-                        <th bgcolor="#FFEEFD">
+                        <th bgcolor="#ffb6c1">
                             <a href="BroneerimisPage.js" target="_blank">Klubi 1</a>
                         </th>
-                        <th bgcolor="#ffb6c1">
+                        <th bgcolor="#FFEEFD">
                             <a href="BroneerimisPageKlubi2.js" target="_blank">Klubi 2</a>
                         </th>
                         <th bgcolor="#ffb6c1">
@@ -73,8 +73,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>9:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -83,8 +82,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>10:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -93,8 +91,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>10:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -103,8 +100,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>11:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -113,8 +109,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>11:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -123,8 +118,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>12:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -133,8 +127,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>12:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -143,8 +136,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>13:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -153,8 +145,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>13:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -163,8 +154,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>14:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -173,8 +163,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>14:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -183,8 +172,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#f08080"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>15:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -193,8 +181,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>15:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -203,8 +190,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>16:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -213,8 +199,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>16:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -223,8 +208,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>17:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -233,8 +217,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>17:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -243,8 +226,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>18:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -253,8 +235,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>18:30</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -263,8 +244,7 @@ const BroneerimisPage = () => {
                     <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
-                </tr>
-                <tr>
+                </tr>                <tr>
                     <td>19:00</td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -338,10 +318,6 @@ const BroneerimisPage = () => {
             </table>
             <br></br>
             <br></br>
-            <p align="center">
-                <button>Kinnita!</button>
-            </p>
-
             <br></br>
             <br></br>
         </div>
