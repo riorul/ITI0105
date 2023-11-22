@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import useWindowDimensions from "./windowDimensions";
 
-const RegisterPage = ({onRegister}) =>{
+const RegisterPage = () =>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
@@ -9,8 +9,21 @@ const RegisterPage = ({onRegister}) =>{
     const handleSubmit = (e) => {
         e.preventDefault();
         //alert("registreeritud");
-        onRegister(email, password, passwordConfirmation);
+        handleRegister(email, password, passwordConfirmation);
 
+    };
+    const handleRegister = (email, password, passwordConfirmation) => {
+        if (passwordConfirmation === password && password !== "") {
+            //setIsLoggedIn(true);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+
+            alert("New user registered");
+            const currentUrl = window.location.href;
+            window.location.href = currentUrl.replace('register', '');
+        } else {
+            alert("Passwords don´t match");
+        }
     };
 
     const { height, width } = useWindowDimensions();
