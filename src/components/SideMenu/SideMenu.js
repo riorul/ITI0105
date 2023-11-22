@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './SideMenu.css';
 import { useNavigate } from 'react-router-dom';
-import defaultImage from '../assets/profile.png';
+import defaultImage from '../../assets/profile.png';
 
 const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
     const navigate = useNavigate();

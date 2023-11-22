@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import "./Header.css"
-import MenuSVG from '../assets/menu.svg';
-import MagnifierSVG from '../assets/MagnifierSVG';
-import SideMenu from './SideMenu';
+import MenuSVG from '../../assets/menu.svg';
+import MagnifierSVG from '../../assets/MagnifierSVG';
+import SideMenu from '../SideMenu/SideMenu';
 
 const Header = () => {
     const [isSearchHovered, setIsSearchHovered] = useState(false);
