@@ -28,3 +28,19 @@ h3 {
   font-weight: normal;
   font-size: 24px;
 }
+
+h4 {
+  color: #C2A5FF;
+  font-size: 36px;
+  letter-spacing: 10px;
+}
+
+h5 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 24px;
+}
