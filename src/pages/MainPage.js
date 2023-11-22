@@ -2,6 +2,8 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import mainPageTennisImage from '../assets/home/tennis_main.png';
 import introFirstImage from '../assets/home/introfirst.png';
+import introSecondImage from '../assets/home/introsecond.png';
+import introThirdImage from '../assets/home/introthird.png';
 import './MainPage.css';
 
 import { ReactComponent as ContactSVG} from "../assets/home/contact.svg"
@@ -62,7 +64,7 @@ const MainPage = () => {
                     <img
                         src={introFirstImage} // Replace with the actual URL of your image
                         alt="Description of the image"
-                        className="responsive-image"
+                        className="responsive-image intro-image"
                     />
                 </div>
             </div>
@@ -72,19 +74,19 @@ const MainPage = () => {
 
                 <div className="intro-image-container">
                     <img
-                        src={introFirstImage} // Replace with the actual URL of your image
+                        src={introSecondImage} // Replace with the actual URL of your image
                         alt="Description of the image"
-                        className="responsive-image"
+                        className="responsive-image intro-image"
                     />
                 </div>
 
                 <div className="intro-content">
-                    <h4>Staadionid</h4>
+                    <h4>Varustuse rentimine</h4>
                     <p>
-                        Avage oma tennisepotentsiaal meie tipptasemel väljakutel. Olenemata sellest,
-                        kas olete algaja või kogenud mängija, meie staadionid on loodud teie mängu
-                        parimaks naudinguks. Valige aeg ja kindlustage oma koht.
-                        Arenda ennast – broneeri oma väljak kohe!
+                        Meie esmaklassilise varustuse renditeenus on loodud teie mängu parimaks kogemiseks,
+                        andes teile väljakul eelise. Saate proovida erinevaid usaldusväärseid kaubamärki
+                        reketeid, nööre ja tarvikuid. Proovige enne ostmist ja mängige enesekindlalt.
+                        Rendi kohe ja tõsta oma mäng uuele tasemele!
                     </p>
                 </div>
             </div>
@@ -92,20 +94,20 @@ const MainPage = () => {
 
             <div className="introduction-container">
                 <div className="intro-content">
-                    <h4>Staadionid</h4>
+                    <h4>Treenerid</h4>
                     <p>
-                        Avage oma tennisepotentsiaal meie tipptasemel väljakutel. Olenemata sellest,
-                        kas olete algaja või kogenud mängija, meie staadionid on loodud teie mängu
-                        parimaks naudinguks. Valige aeg ja kindlustage oma koht.
-                        Arenda ennast – broneeri oma väljak kohe!
+                        Kogege oma tennise teekonda koos meie erakordsete treeneritega. Alates kohan-datud
+                        koolitusprogrammidest kuni paindliku ajakavani – oleme pühendunud teie edusammudele.
+                        Valige oma treener, valige aeg ja kohandage oma pakett. Kindlustage oma koht ja
+                        valmistuge väljakut domineerima. Ära jäta võimalust kasutamata – broneeri oma treener kohe!
                     </p>
                 </div>
 
                 <div className="intro-image-container">
                     <img
-                        src={introFirstImage} // Replace with the actual URL of your image
+                        src={introThirdImage} // Replace with the actual URL of your image
                         alt="Description of the image"
-                        className="responsive-image"
+                        className="responsive-image intro-image"
                     />
                 </div>
             </div>

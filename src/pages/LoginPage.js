@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./Login.css"
-import { ReactComponent as FacebookLogo} from "../assets/facebook.svg"
-import { ReactComponent as GoogleLogo} from "../assets/google.svg"
-import { ReactComponent as FigmaLogo} from "../assets/figma.svg"
+import { ReactComponent as FacebookLogo} from "../assets/login/facebook.svg"
+import { ReactComponent as GoogleLogo} from "../assets/login/google.svg"
+import { ReactComponent as FigmaLogo} from "../assets/login/figma.svg"
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');

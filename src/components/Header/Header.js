@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./Header.css"
-import MenuSVG from '../../assets/menu.svg';
-import MagnifierSVG from '../../assets/MagnifierSVG';
+import MenuSVG from '../../assets/header/menu.svg';
+import MagnifierSVG from '../../assets/header/MagnifierSVG';
 import SideMenu from '../SideMenu/SideMenu';
 
 const Header = () => {
