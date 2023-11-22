@@ -1,4 +1,5 @@
 .footer {
+    margin-top: 200px;
     height: 404px;
     background-color: #C184FE;
     text-align: left;
@@ -7,7 +8,6 @@
     display: flex;
     flex-wrap: wrap;
 }
-
 
 .column {
     height: 60%;
@@ -28,10 +28,8 @@
     justify-content: space-around; /* Use space-around for all columns except the first one */
 }
 
-.column h5 {
+.footer-header {
     margin-left: 40px;
-    color: #fff;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -52,17 +50,17 @@
     font-size: 20px;
 }
 
-.line2 {
+.footer-line {
     width: 100%;
-    border-bottom: 2px solid #fff; /* Add a white border line at the bottom */
+    border-bottom: 2px solid #fff;
     margin: 5px 40px;
     height: 4px;
 }
 
-/* Style for the "Lorem Ipsum" text */
 .names {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     height: 5%;
     margin-left: 40px;
+    letter-spacing: 5px;
 }

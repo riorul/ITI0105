@@ -1,5 +1,5 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 import mainPageTennisImage from '../assets/home/tennis_main.png';
 import introFirstImage from '../assets/home/introfirst.png';
 import './MainPage.css';
