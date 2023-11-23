@@ -2,9 +2,9 @@ import React from 'react';
 
 const MagnifierSVG = ({ hovered }) => (
     <svg
-        width="55"
-        height="55"
-        viewBox="0 0 55 55"
+        width="56"
+        height="56"
+        viewBox="0 0 56 56"
         fill="none"
         className={`magnifier-svg${hovered ? ' search-hovered' : ''}`}
     >
