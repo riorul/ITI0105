@@ -1,37 +1,23 @@
 import React, { useState } from 'react';
-import "./Header.css"
-import MenuSVG from '../../assets/header/menu.svg';
+import { useNavigate } from "react-router-dom";
+import MenuSVG from '../../assets/header/MenuSVG';
 import MagnifierSVG from '../../assets/header/MagnifierSVG';
+import HomeSVG from '../../assets/header/HomeSVG';
 import SideMenu from '../SideMenu/SideMenu';
+import "./Header.css";
 
-const Header = () => {
+const Header = ({ title, homeIcon }) => {
+    const [isMenuHovered, setIsMenuHovered] = useState(false);
+    const [isHomeHovered, setIsHomeHovered] = useState(false);
     const [isSearchHovered, setIsSearchHovered] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
     const username = "Rivo";
-    const handleSearchClick = () => {
-        console.log('SEARCH clicked');
-    };
+    const navigate = useNavigate();
 
-    const handleSearchHover = () => {
-        setIsSearchHovered(true);
-    };
-
-    const handleSearchLeave = () => {
-        setIsSearchHovered(false);
-    };
-
-    const handleEstClick = () => {
-        console.log('EST clicked');
-    };
-
-    const handleEngClick = () => {
-        console.log('ENG clicked');
-    };
-
-    const toggleMenu = () => {
-        setMenuOpen(!isMenuOpen);
-    };
-
+    const handleHover = (stateSetter) => () => stateSetter(true);
+    const handleLeave = (stateSetter) => () => stateSetter(false);
+    const handleClick = (action) => () => action();
+    const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
     return (
         <header>
@@ -53,38 +39,74 @@ const Header = () => {
                 </defs>
             </svg>
 
-            <img src={MenuSVG} alt="Menu Icon" className="menu-svg"
-                 onClick={(e) => {
-                    e.stopPropagation();
-                    toggleMenu();
-            }} />
-
-            <SideMenu isOpen={isMenuOpen} onClose={toggleMenu} userName={username}/>
-
-
-            <div className="search-container">
+            <div className="header-text">
                 <div
-                    onClick={handleSearchClick}
-                    className={`magnifier-link ${isSearchHovered ? 'search-hovered' : ''}`}
-                    onMouseEnter={handleSearchHover}
-                    onMouseLeave={handleSearchLeave}
+                    className="menu-container"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        toggleMenu();
+                    }}
+                    onMouseEnter={handleHover(setIsMenuHovered)}
+                    onMouseLeave={handleLeave(setIsMenuHovered)}
                 >
-                    <MagnifierSVG hovered={isSearchHovered} />
+                    <MenuSVG hovered={isMenuHovered}/>
                 </div>
-                <div className="header-buttons">
-                    <div className={`clickable-area ${isSearchHovered ? 'search-hovered' : ''}`} onClick={handleSearchClick} onMouseEnter={handleSearchHover} onMouseLeave={handleSearchLeave}>
-                        SEARCH
-                    </div>
-                    <span>|</span>
-                    <div className="clickable-area" onClick={handleEstClick}>
-                        EST
-                    </div>
-                    <div className="clickable-area" onClick={handleEngClick}>
-                        ENG
-                    </div>
+
+                <div className="title-container text-style">
+                    {title}
+                </div>
+
+                <div className="search-container text-style">
+                    {homeIcon ? (
+                        <div
+                            onClick={handleClick(() => navigate("/"))}
+                            className="home-link"
+                            onMouseEnter={handleHover(setIsHomeHovered)}
+                            onMouseLeave={handleLeave(setIsHomeHovered)}
+                        >
+                            <HomeSVG hovered={isHomeHovered} />
+                        </div>
+                    ) : (
+                        <>
+                            <div
+                                className="magnifier-link"
+                                onClick={handleClick(() => console.log('SEARCH clicked'))}
+                                onMouseEnter={handleHover(setIsSearchHovered)}
+                                onMouseLeave={handleLeave(setIsSearchHovered)}
+                            >
+                                <MagnifierSVG hovered={isSearchHovered} />
+                            </div>
+
+                            <div
+                                className={`clickable-area ${isSearchHovered ? 'search-hovered' : ''}`}
+                                onClick={handleClick(() => console.log('SEARCH clicked'))}
+                                onMouseEnter={handleHover(setIsSearchHovered)}
+                                onMouseLeave={handleLeave(setIsSearchHovered)}
+                            >
+                                OTSI
+                            </div>
+
+                            <span>|</span>
+
+                            <div
+                                className="clickable-area"
+                                onClick={handleClick(() => console.log('EST clicked'))}>
+                                EST
+                            </div>
+
+                            <div
+                                className="clickable-area"
+                                onClick={handleClick(() => console.log('ENG clicked'))}>
+                                ENG
+                            </div>
+                        </>
+                    )}
                 </div>
             </div>
+
+            <SideMenu isOpen={isMenuOpen} onClose={toggleMenu} userName={username}/>
         </header>
     );
 };
+
 export default Header;
