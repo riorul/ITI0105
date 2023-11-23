@@ -14,7 +14,7 @@ const MainPage = () => {
 
     return (
         <div>
-            <Header title="TITLE" homeIcon={true}/>
+            <Header />
             <div className="image-container">
                 <img
                     src={mainPageTennisImage} // Replace with the actual URL of your image
