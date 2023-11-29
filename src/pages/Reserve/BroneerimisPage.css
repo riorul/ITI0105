@@ -5,7 +5,7 @@ table, th, td{
     text-align: center;
 }
 
-button1 {
+.button1 {
     width: 1080px;
     height: 50px;
     background-color: greenyellow; /* Light pink */
@@ -18,7 +18,7 @@ button1 {
     cursor: pointer;
 }
 
-broneeritud {
+.broneeritud {
     color: white;
     background-color: lightcoral;
 }
