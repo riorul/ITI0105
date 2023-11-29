@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import LoginPage from './pages/LoginPage'; // Import your LoginPage component
 import './index.css';
-import MainPage from './pages/MainPage'; // Import your MainPage component
-import RegisterPage from './pages/RegisterPage';
-import BroneerimisPage from "./pages/BroneerimisPage";
+import LoginPage from './pages/Login/LoginPage';
+import MainPage from './pages/MainPage/MainPage';
+import RegisterPage from './pages/Register/RegisterPage';
+import BroneerimisPage from "./pages/Reserve/BroneerimisPage";
+import CourtsPage from "./pages/Courts/CourtsPage";
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/" element={<MainPage />} />
             <Route path="/broneerimine" element={<BroneerimisPage />} />
             <Route path="*" element={<MainPage />} />
+            <Route path="/staadionid" element={<CourtsPage />} />
         </Routes>
 
     );

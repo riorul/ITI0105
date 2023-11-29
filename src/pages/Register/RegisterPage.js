@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import useWindowDimensions from "./windowDimensions";
+import useWindowDimensions from "../../utils/windowDimensions";
+import RoundedButton from "../../components/buttons/RoundedButton";
 
 const RegisterPage = () =>{
     const [email, setEmail] = useState('');
@@ -25,8 +26,6 @@ const RegisterPage = () =>{
             alert("Passwords don´t match");
         }
     };
-
-    const { height, width } = useWindowDimensions();
 
     return (
         <div className="login-page">
@@ -66,7 +65,7 @@ const RegisterPage = () =>{
                         </div>
 
                     </div>
-                    <button type="submit">Registreeri</button>
+                    <RoundedButton text={"Registeeri"} />
                 </form>
             </div>
             <div className="right-section">

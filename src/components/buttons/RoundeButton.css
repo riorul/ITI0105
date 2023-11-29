@@ -1,0 +1,20 @@
+.rounded-button {
+    width: 227px;
+    height: 49px;
+    background-color: #FFEEFD;
+    border: none;
+    border-radius: 27px;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.primary {
+    color: #B232A6;
+}
+
+.selected {
+    background-color: #ED82FF;
+    color: #FFFFFF;
+}

@@ -1,0 +1,22 @@
+.text-card {
+    margin: 0 30px;
+    width: 372px;
+    height: 351px;
+    padding: 10px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #FEDBFF;
+}
+
+.text-card h2 {
+    margin: 10px 10px 20px;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.text-card p {
+    margin: 5px;
+    font-size: 16px;
+    color: #A300CC;
+    text-align: justify;
+}
