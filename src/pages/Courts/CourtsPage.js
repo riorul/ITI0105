@@ -103,7 +103,7 @@ const CourtsPage = () => {
                 <TextCard text={fillerText} title={"2. Lõbutse!"} />
                 <TextCard text={fillerText} title={"3. Jäta arvustus"} />
             </div>
-            <Footer />
+            <Footer footerSvg={true}/>
         </div>
     );
 };

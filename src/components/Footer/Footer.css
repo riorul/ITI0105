@@ -1,5 +1,4 @@
 .footer {
-    margin-top: 200px;
     height: 404px;
     background-color: #C184FE;
     text-align: left;
@@ -7,6 +6,18 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+}
+
+.footer-svg, .footer {
+    vertical-align: middle;
+}
+
+.footer-no-svg {
+    margin-top: 200px; /* Adjust the value as needed */
+}
+
+.footer-svg {
+    margin-top: 200px;
 }
 
 .column {
