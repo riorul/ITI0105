@@ -1,0 +1,8 @@
+.image-gallery {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 16px;
+}

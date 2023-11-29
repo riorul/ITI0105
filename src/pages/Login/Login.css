@@ -69,19 +69,6 @@ input[type="email"], input[type="password"] {
     font-size: 18px;
 }
 
-button {
-    width: 227px;
-    height: 49px;
-    background-color: #FFEEFD; /* Light pink */
-    border: none;
-    border-radius: 27px;
-    color: #B232A6; /* Purple */
-    font-size: 25px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-    cursor: pointer;
-}
-
 .divider {
     display: flex;
     align-items: center;

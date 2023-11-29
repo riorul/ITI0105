@@ -1,14 +1,14 @@
 import React from 'react';
 import "./BroneerimisPage.css"
-import MainPage from "./MainPage";
-import "./Login.css"
+import MainPage from "../MainPage/MainPage";
+import "../Login/Login.css"
 const BroneerimisPage = () => {
     return (
         <div>
             <h1 align="center">Broneerimine</h1>
-            <p align="center">Welcome to Klubi3!</p>
+            <p align="center">Welcome to Klubi4!</p>
             <p align="center">
-                <a href={MainPage} targer={"_blank"}>
+                <a href={MainPage} target={"_blank"}>
                     <button>Avalehele tagasi!</button>
                 </a>
             </p>
@@ -21,10 +21,10 @@ const BroneerimisPage = () => {
                         <th bgcolor="#ffb6c1">
                             <a href="BroneerimisPageKlubi2.js" target="_blank">Klubi 2</a>
                         </th>
-                        <th bgcolor="#FFEEFD">
+                        <th bgcolor="#ffb6c1">
                             <a href="BroneerimisPageKlubi3.js" target="_blank">Klubi 3</a>
                         </th>
-                        <th bgcolor="#ffb6c1">
+                        <th bgcolor="#FFEEFD">
                             <a href="BroneerimisPageKlubi4.js" target="_blank">Klubi 4</a>
                         </th>
                     </tr>

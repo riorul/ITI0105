@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./Login.css"
-import { ReactComponent as FacebookLogo} from "../assets/login/facebook.svg"
-import { ReactComponent as GoogleLogo} from "../assets/login/google.svg"
-import { ReactComponent as FigmaLogo} from "../assets/login/figma.svg"
+import { ReactComponent as FacebookLogo} from "../../assets/login/facebook.svg"
+import { ReactComponent as GoogleLogo} from "../../assets/login/google.svg"
+import { ReactComponent as FigmaLogo} from "../../assets/login/figma.svg"
+import RoundedButton from "../../components/buttons/RoundedButton";
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -67,7 +68,7 @@ const LoginPage = () => {
                                    onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                     </div>
-                    <button type="submit">Logi sisse</button>
+                    <RoundedButton text={"Logi sisse"} />
                 </form>
             </div>
             <div className="right-section">
@@ -93,7 +94,7 @@ const LoginPage = () => {
                 <div className="sign-up">
                     <h1>UUS?</h1>
                     <h3>Registeeri ja avasta tennise võlud!</h3>
-                    <button onClick={handleWantsToRegister} type="submit">Registeeri</button>
+                    <RoundedButton onClick={handleWantsToRegister} text={"Registeeri"} />
                 </div>
             </div>
         </div>

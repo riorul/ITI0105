@@ -1,14 +1,14 @@
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import mainPageTennisImage from '../assets/home/tennis_main.png';
-import introFirstImage from '../assets/home/introfirst.png';
-import introSecondImage from '../assets/home/introsecond.png';
-import introThirdImage from '../assets/home/introthird.png';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import mainPageTennisImage from '../../assets/home/tennis_main.png';
+import introFirstImage from '../../assets/home/introfirst.png';
+import introSecondImage from '../../assets/home/introsecond.png';
+import introThirdImage from '../../assets/home/introthird.png';
 import './MainPage.css';
 
-import { ReactComponent as ContactSVG} from "../assets/home/contact.svg"
-import { ReactComponent as AddSVG} from "../assets/home/plussign.svg"
-import { ReactComponent as QuestionSVG} from "../assets/home/questionmark.svg"
+import { ReactComponent as ContactSVG} from "../../assets/home/contact.svg"
+import { ReactComponent as AddSVG} from "../../assets/home/plussign.svg"
+import { ReactComponent as QuestionSVG} from "../../assets/home/questionmark.svg"
 import React from "react";
 const MainPage = () => {
 
