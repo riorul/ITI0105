@@ -5,6 +5,7 @@ import MainPage from './pages/MainPage/MainPage';
 import RegisterPage from './pages/Register/RegisterPage';
 import BroneerimisPage from "./pages/Reserve/BroneerimisPage";
 import CourtsPage from "./pages/Courts/CourtsPage";
+import FeedbackPage from "./pages/FeedbackPage/FeedbackPage";
 
 const App = () => {
 
@@ -12,8 +13,9 @@ const App = () => {
         <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/" element={<MainPage />} />
             <Route path="/broneerimine" element={<BroneerimisPage />} />
+            <Route path="/feedback" element={<FeedbackPage />} />
+            <Route path="/" element={<MainPage />} />
             <Route path="*" element={<MainPage />} />
             <Route path="/staadionid" element={<CourtsPage />} />
         </Routes>

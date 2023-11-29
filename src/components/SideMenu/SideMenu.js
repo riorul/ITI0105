@@ -59,7 +59,7 @@ const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
                     <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/seaded")}>
                         Seaded
                     </div>
-                    <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/tagasiside")}>
+                    <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/feedback")}>
                         Tagasiside
                     </div>
                 </div>
