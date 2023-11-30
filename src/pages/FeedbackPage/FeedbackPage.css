@@ -163,8 +163,9 @@
     align-items: center;
     gap: 20px; /* Background color for the slider */
     border-radius: 22px; /* Text color for the slider */
-    padding: 10px;
-    color: #FFFFFF; /* Change the text color to a contrasting color */
+    padding: 10px; /* Change the text color to a contrasting color */
     background: #C289FC;/* Adjust padding if needed */
+    accent-color: #C289FC;
+
     /* Add other necessary styles for the slider */
 }

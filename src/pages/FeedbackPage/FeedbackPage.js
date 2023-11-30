@@ -22,7 +22,7 @@ const FeedbackPage = () => {
 
     return (
         <div className="page-container">
-            <Header />
+            <Header title="Tagasiside vorm" homeIcon={true}/>
             <div className="container">
                 <div className="left-section">
                     <div className="ellipse-131"></div>
