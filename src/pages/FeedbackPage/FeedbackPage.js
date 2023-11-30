@@ -48,7 +48,7 @@ const FeedbackPage = () => {
                                         value={phone}
                                         onChange={e => setPhone(e.target.value)}
                                         placeholder="+372 1234 5678"
-                                        label="Telefoni Number:"
+                                        label="Telefoninumber:"
                                     />
                                 </div>
                                 <div className="email_input">
@@ -56,7 +56,7 @@ const FeedbackPage = () => {
                                         value={email}
                                         onChange={e => setEmail(e.target.value)}
                                         placeholder="nimi123@mail.ee"
-                                        label="Emaili aadress:"
+                                        label="Meiliaadress:"
                                     />
                                 </div>
                                 <div className="emojis_layout">
