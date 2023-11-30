@@ -84,7 +84,7 @@ const FeedbackPage = () => {
                                         min="1"
                                         max="5"
                                         value={rating}
-                                        className="slider"
+                                        className="rating-scale"
                                     />
                                 </div>
                                 <div className="feedback_input">
