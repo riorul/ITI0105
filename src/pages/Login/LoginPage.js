@@ -4,7 +4,7 @@ import "./Login.css"
 import { ReactComponent as FacebookLogo} from "../../assets/login/facebook.svg"
 import { ReactComponent as GoogleLogo} from "../../assets/login/google.svg"
 import { ReactComponent as FigmaLogo} from "../../assets/login/figma.svg"
-import RoundedButton from "../../components/buttons/RoundedButton";
+import RoundedButton from "../../components/Buttons/RoundedButton";
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');

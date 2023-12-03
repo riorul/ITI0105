@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header/Header';
+import UserHeader from '../../components/Header/UserHeader';
 import Footer from '../../components/Footer/Footer';
 import InputField from '../../components/InputField/InputField';
 import './FeedbackPage.css';
@@ -22,7 +22,7 @@ const FeedbackPage = () => {
 
     return (
         <div className="page-container">
-            <Header />
+            <UserHeader />
             <div className="container">
                 <div className="left-section">
                     <div className="ellipse-131"></div>

@@ -1,0 +1,11 @@
+.header-text.admin {
+    background: black;
+}
+
+.menu-svg.menu-hovered.admin .line-menu-one,
+.menu-svg.menu-hovered.admin .line-menu-two,
+.menu-svg.menu-hovered.admin .line-menu-three,
+.home-svg.home-hovered.admin .home-base,
+.home-svg.home-hovered.admin .home-roof {
+    stroke: #808080;
+}

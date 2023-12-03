@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import useWindowDimensions from "../../utils/windowDimensions";
-import RoundedButton from "../../components/buttons/RoundedButton";
+import RoundedButton from "../../components/Buttons/RoundedButton";
 
 const RegisterPage = () =>{
     const [email, setEmail] = useState('');
