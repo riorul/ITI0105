@@ -24,7 +24,7 @@ const LoginPage = () => {
 
     return (
         <div className="login-page">
-            <div className="left-section">
+            <div className="left-login-section">
                 <h2 className="left-heading">Fox Serve broneeringud</h2>
                 <div>
                     <h1 className="top-margin">Logi sisse oma kontosse</h1>
@@ -71,7 +71,7 @@ const LoginPage = () => {
                     <RoundedButton text={"Logi sisse"} />
                 </form>
             </div>
-            <div className="right-section">
+            <div className="right-login-section">
                 <div className="wave-container">
                     <svg
                     className="wave-svg"
