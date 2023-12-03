@@ -24,11 +24,15 @@
     justify-content: center;
 }
 
-.left-section {
+.left-login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     flex: 5;
 }
 
-.right-section {
+.right-login-section {
     display: flex;
     align-items: center;
     flex: 2;
@@ -57,15 +61,16 @@
     width: 100%;
 }
 
-input[type="email"], input[type="password"] {
-    width: 95%;
-    max-width: 618px;
+input[type="email"],
+input[type="password"] {
+    width: 618px; /* Adjust width as needed */
+    max-width: 600px; /* Adjust max-width as needed */
     height: auto;
     background-color: #f5f5f5; /* Light gray */
     border: none;
     border-radius: 12px;
     padding: 15px; /* Adjust padding as needed */
-    margin-bottom: 30px; /* Add some space between the inputs */
+    margin-bottom: 20px; /* Add some space between the inputs */
     font-size: 18px;
 }
 
