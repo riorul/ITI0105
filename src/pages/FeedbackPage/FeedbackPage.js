@@ -10,6 +10,7 @@ const FeedbackPage = () => {
     const [phone, setPhone] = useState('');
     const [feedback, setFeedback] = useState('');
     const [rating, setRating] = useState(3);
+    const [feedbackSent, setFeedbackSent] = useState(false);
 
     const handleRatingChange = (event) => {
         setRating(parseInt(event.target.value));
@@ -18,22 +19,36 @@ const FeedbackPage = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(name, email, phone, feedback);
+        setFeedbackSent(true);
+    };
+
+    const handleReturnToMain = () => {
+        // Redirect to main page logic goes here
+        // For example, using react-router-dom: history.push('/main');
     };
 
     return (
         <div className="page-container">
             <Header title="Tagasiside vorm" homeIcon={true}/>
             <div className="container">
-                <div className="left-section">
+                <div className="left-feedback-section">
                     <div className="ellipse-131"></div>
                     <div className="image-15"></div>
                     <div className="text-feedback">
-                        Jäta tagasisidet!
+                        Jäta tagasiside siia!
                     </div>
                 </div>
-                <div className="right-section">
+                <div className="right-feedback-section">
                     <div className="feedback">
                         <div className="content">
+                            {feedbackSent ? (
+                                <div>
+                                    <p className="feedback-sent-message">Feedback Sent!</p>
+                                    <button className="return-button" onClick={handleReturnToMain}>
+                                        Return to main page
+                                    </button>
+                                </div>
+                            ) : (
                             <form onSubmit={handleSubmit}>
                                 <div className="name_input">
                                     <InputField
@@ -95,6 +110,7 @@ const FeedbackPage = () => {
                                     <input type="submit" value="Saada" />
                                 </div>
                             </form>
+                            )}
                         </div>
                     </div>
                 </div>
