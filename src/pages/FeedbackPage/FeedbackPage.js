@@ -21,7 +21,6 @@ const FeedbackPage = () => {
         setIsFeedbackSubmitted(true);
     };
 
-
     return (
         <div className="page-container">
             <Header title="Tagasiside vorm" homeIcon={true}/>
