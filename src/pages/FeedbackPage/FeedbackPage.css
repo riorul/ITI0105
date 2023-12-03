@@ -1,10 +1,10 @@
-.left-section {
+.left-feedback-section {
     flex: 1;
     position: relative;
     transform: translateX(+10%);
     z-index: 0; /* Ensure the left section is behind the side menu */
 }
-.right-section {
+.right-feedback-section {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@
 }
 
 /* Adjust this selector according to your HTML structure */
-.left-section .text-feedback {
+.left-feedback-section .text-feedback {
     position: absolute;
     width: 400px;
     height: 123px;
@@ -34,7 +34,7 @@
     white-space: nowrap;
     transform: translateX(0%); /* Move the text 30% to the right */
 }
-.left-section .ellipse-131 {
+.left-feedback-section .ellipse-131 {
     position: absolute;
     width: 70%;
     height: 75%;

@@ -24,14 +24,14 @@ const FeedbackPage = () => {
         <div className="page-container">
             <Header />
             <div className="container">
-                <div className="left-section">
+                <div className="left-feedback-section">
                     <div className="ellipse-131"></div>
                     <div className="image-15"></div>
                     <div className="text-feedback">
                         Jäta tagasisidet!
                     </div>
                 </div>
-                <div className="right-section">
+                <div className="right-feedback-section">
                     <div className="feedback">
                         <div className="content">
                             <form onSubmit={handleSubmit}>
