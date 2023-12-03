@@ -6,6 +6,7 @@ import RegisterPage from './pages/Register/RegisterPage';
 import BroneerimisPage from "./pages/Reserve/BroneerimisPage";
 import CourtsPage from "./pages/Courts/CourtsPage";
 import FeedbackPage from "./pages/FeedbackPage/FeedbackPage";
+import AdminUserPage from "./pages/Admin/AdminUserPage";
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/" element={<MainPage />} />
             <Route path="*" element={<MainPage />} />
             <Route path="/staadionid" element={<CourtsPage />} />
+            <Route path="/admin-view" element={<AdminUserPage />} />
         </Routes>
 
     );
