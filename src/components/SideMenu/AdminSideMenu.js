@@ -1,12 +1,14 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ReactComponent as AdminProfile } from '../../assets/admin/adminProfile.svg';
+import { ReactComponent as AdminProfile } from '../../assets/defaultPfp.svg';
 import './AdminSideMenu.css';
 import './CommonSideMenu.css';
+import {useAuth} from "../../auth/AuthProvider";
 
 const AdminSideMenu = ({ isOpen }) => {
     const navigate = useNavigate();
     const sideMenuRef = useRef();
+    const { logout } = useAuth();
 
     const handleNavigation = (path) => {
         navigate(path);
@@ -37,7 +39,7 @@ const AdminSideMenu = ({ isOpen }) => {
 
                 <div
                     className="clickable-area side-menu-buttons text-container"
-                    onClick={() => handleNavigation('/login')}
+                    onClick={() => logout()}
                 >
                     Logi välja
                 </div>

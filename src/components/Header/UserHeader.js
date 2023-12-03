@@ -8,12 +8,11 @@ import "./HeaderUser.css";
 import "./HeaderCommon.css";
 import useOutsideClick from "../../hooks/useOutsideClick";
 
-const UserHeader = ({ title, homeIcon }) => {
+const UserHeader = ({ title, homeIcon, username }) => {
     const [isMenuHovered, setIsMenuHovered] = useState(false);
     const [isHomeHovered, setIsHomeHovered] = useState(false);
     const [isSearchHovered, setIsSearchHovered] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const username = "Rivo";
     const navigate = useNavigate();
     const userHeaderRef = useRef();
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import './SideMenu.css';
 import { useNavigate } from 'react-router-dom';
-import defaultImage from '../../assets/profile.png';
+import defaultImage from '../../assets/defaultPfp.svg';
+import { useAuth } from "../../auth/AuthProvider";
 
-const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
+const SideMenu = ({ isOpen, onClose }) => {
+    const { userData, logout } = useAuth();
     const navigate = useNavigate();
     const sideMenuRef = useRef();
 
@@ -37,7 +39,7 @@ const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
             </div>
 
             <div className="text-container side-menu-buttons">
-                Tere, {userName}
+                Tere, {userData?.username}
             </div>
 
             <div className="navigation-side-menu">
@@ -61,6 +63,9 @@ const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
                     </div>
                     <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/feedback")}>
                         Tagasiside
+                    </div>
+                    <div className="clickable-area side-menu-buttons text-container" onClick={() => logout()}>
+                        Logi välja
                     </div>
                 </div>
             </div>

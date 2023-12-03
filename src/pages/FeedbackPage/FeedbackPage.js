@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header/Header';
+import Header from '../../components/Header/UserHeader';
 import Footer from '../../components/Footer/Footer';
 import InputField from '../../components/InputField/InputField';
-import FeedbackReturnButton from '../../components/buttons/FeedbackReturnButton';
+import FeedbackReturnButton from '../../components/Buttons/FeedbackReturnButton';
 import './FeedbackPage.css';
 
 const FeedbackPage = () => {

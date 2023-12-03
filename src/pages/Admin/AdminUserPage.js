@@ -8,6 +8,11 @@ const AdminUserPage = () => {
     return (
         <div>
             <AdminHeader />
+
+            <div>
+
+            </div>
+
         </div>
     );
 };
