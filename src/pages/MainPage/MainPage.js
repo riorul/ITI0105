@@ -1,4 +1,4 @@
-import Header from '../../components/Header/Header';
+import UserHeader from '../../components/Header/UserHeader';
 import Footer from '../../components/Footer/Footer';
 import mainPageTennisImage from '../../assets/home/tennis_main.png';
 import introFirstImage from '../../assets/home/introfirst.png';
@@ -14,7 +14,7 @@ const MainPage = () => {
 
     return (
         <div>
-            <Header />
+            <UserHeader />
             <div className="image-container">
                 <img
                     src={mainPageTennisImage} // Replace with the actual URL of your image

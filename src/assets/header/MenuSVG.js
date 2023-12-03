@@ -1,12 +1,12 @@
 import React from 'react';
 
-const MenuSVG = ({ hovered }) => (
+const MenuSVG = ({ hovered, isAdmin=false }) => (
     <svg
         width="56"
         height="56"
         viewBox="0 0 56 56"
         fill="none"
-        className={`menu-svg${hovered ? ' menu-hovered' : ''}`}
+        className={`menu-svg${hovered ? ' menu-hovered' : ''}${isAdmin ? ' admin' : ''}`}
     >
         <path
             className="line-menu-one"
