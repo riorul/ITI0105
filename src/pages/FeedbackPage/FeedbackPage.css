@@ -47,7 +47,7 @@
 }
 
 
-.left-section .image-15 {
+.left-feedback-section .image-15 {
     position: absolute;
     width: 90%;
     height: 90%;
@@ -156,7 +156,7 @@
     align-items: center;
     gap: 20px;
 }
-.slider {
+.rating-scale {
     display: flex;
     width: 95%;
     justify-content: space-between;
@@ -164,7 +164,28 @@
     gap: 20px; /* Background color for the slider */
     border-radius: 22px; /* Text color for the slider */
     padding: 10px;
-    color: #FFFFFF; /* Change the text color to a contrasting color */
+    accent-color: #C289FC; /* Change the text color to a contrasting color */
     background: #C289FC;/* Adjust padding if needed */
-    /* Add other necessary styles for the slider */
+    /* Add other necessary styles for the slider */ /* Darker green on hover */
+}
+.feedback-sent-text {
+    border-radius: 10px;
+    background: #C289FC;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    width: 758px;
+    height: 164px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    font-family: 'Montserrat', serif;
+    font-size: 36px;
+    font-weight: 600;
 }
