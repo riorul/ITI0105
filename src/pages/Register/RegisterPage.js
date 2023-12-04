@@ -1,29 +1,40 @@
 import React, {useState} from "react";
 import RoundedButton from "../../components/Buttons/RoundedButton";
+import {useNavigate} from "react-router-dom";
+import {useAuth} from "../../auth/AuthProvider";
 
 const RegisterPage = () =>{
+    const { register } = useAuth();
+    const navigate = useNavigate()
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //alert("registreeritud");
-        handleRegister(email, password, passwordConfirmation);
+        handleRegister(email, password, passwordConfirmation).then((success) => {
+            if (success) {
+                alert("New user registered")
+            } else {
+                alert("Passwords don't match or password is empty");
+            }
+        })
 
     };
-    const handleRegister = (email, password, passwordConfirmation) => {
-        if (passwordConfirmation === password && password !== "") {
-            //setIsLoggedIn(true);
-            localStorage.setItem('email', email);
-            localStorage.setItem('password', password);
 
-            alert("New user registered");
-            const currentUrl = window.location.href;
-            window.location.href = currentUrl.replace('register', '');
-        } else {
-            alert("Passwords don´t match");
+    const handleRegister = async (email, password, passwordConfirmation) => {
+        if (passwordConfirmation === password && password !== "") {
+            const success = await register({ email, password });
+
+            if (success) {
+                navigate("/login")
+                return true
+            } else {
+                alert("Registration failed. Email or username already taken.");
+            }
         }
+        return false
     };
 
     return (

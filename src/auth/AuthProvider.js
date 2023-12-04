@@ -1,19 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
-import {useNavigate} from "react-router-dom";
 
 const AuthContext = React.createContext();
-
-const predefinedUsers = [
-    { id: 1, username: 'Rivo', password: '1234', email: 'rivo@example.com', firstName: 'Rivo', lastName: 'Orulepa', role: 'user' },
-    { id: 2, username: 'Sander', password: '1234', email: 'sander@example.com', firstName: 'Sander', lastName: 'Valdmaa', role: 'user' },
-    { id: 3, username: 'Tormi', password: '1234', email: 'tormi@example.com', firstName: 'Tormi', lastName: 'Tulvik', role: 'user' },
-    { id: 4, username: 'Admin', password: 'admin', email: 'admin@example.com', firstName: 'Admin', lastName: '', role: 'admin' }
-];
 
 export const AuthProvider = ({ children }) => {
     const [authenticated, setAuthenticated] = useState(false);
     const [userData, setUserData] = useState(null);
-    const navigate = useNavigate();
 
     useEffect(() => {
         const storedToken = localStorage.getItem('token');
@@ -26,8 +17,10 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const loginWithEmail = (email, password) => {
-        // Simulating login with provided username and password
-        const userToLogin = predefinedUsers.find(
+        console.log(localStorage.getItem('predefinedUsers'))
+        const storedUsers = JSON.parse(localStorage.getItem('predefinedUsers'));
+
+        const userToLogin = storedUsers.find(
             (user) => user.email === email && user.password === password
         );
 
@@ -47,6 +40,37 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    const register = (newUserData) => {
+        const storedUsers = JSON.parse(localStorage.getItem('predefinedUsers'));
+
+        const isUsernameTaken = storedUsers.some(user => user.username === newUserData.username);
+        const isEmailTaken = storedUsers.some(user => user.email === newUserData.email);
+
+        if (isUsernameTaken || isEmailTaken) {
+            return false;
+        }
+
+        const newUser = {
+            id: storedUsers.length + 1,
+            ...newUserData,
+            role: 'user',
+        };
+
+        storedUsers.push(newUser);
+        localStorage.setItem('predefinedUsers', JSON.stringify(storedUsers));
+
+        const newToken = generateNewToken(newUser.id);
+
+        setAuthenticated(true);
+        setUserData(newUser);
+
+        localStorage.setItem('token', newToken);
+        localStorage.setItem('user', JSON.stringify(newUser));
+
+        console.log(localStorage.getItem('predefinedUsers'))
+        return true;
+    };
+
     const logout = () => {
         setAuthenticated(false);
         setUserData(null);
@@ -64,6 +88,7 @@ export const AuthProvider = ({ children }) => {
             value={{
                 authenticated,
                 userData,
+                register,
                 loginWithEmail,
                 logout
             }}
@@ -80,3 +105,12 @@ export const useAuth = () => {
     }
     return context;
 };
+
+const predefinedUsers = [
+    { id: 1, username: 'Rivo', password: '1234', email: 'rivo@example.com', firstName: 'Rivo', lastName: 'Orulepa', role: 'user' },
+    { id: 2, username: 'Sander', password: '1234', email: 'sander@example.com', firstName: 'Sander', lastName: 'Valdmaa', role: 'user' },
+    { id: 3, username: 'Tormi', password: '1234', email: 'tormi@example.com', firstName: 'Tormi', lastName: 'Tulvik', role: 'user' },
+    { id: 4, username: 'Admin', password: 'admin', email: 'admin@example.com', firstName: 'Admin', lastName: '', role: 'admin' }
+];
+
+localStorage.setItem('predefinedUsers', JSON.stringify(predefinedUsers));

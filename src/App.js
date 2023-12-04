@@ -12,7 +12,7 @@ import RegisterPage from './pages/Register/RegisterPage';
 import {useAuth} from "./auth/AuthProvider";
 
 const App = () => {
-    const { authenticated } = useAuth();
+    const { authenticated, userData } = useAuth();
     const navigate = useNavigate();
 
     React.useEffect(() => {
@@ -29,7 +29,13 @@ const App = () => {
             <Route path="/broneerimine" element={<BroneerimisPage />} />
             <Route path="/feedback" element={<FeedbackPage />} />
             <Route path="/staadionid" element={<CourtsPage />} />
-            <Route path="/admin-view" element={<AdminUserPage />} />
+
+            {authenticated && userData && userData.role === 'admin' ? (
+                <Route path="/admin-view" element={<AdminUserPage />} />
+            ) : (
+                <Route path="/" element={<Navigate to="/" />} />
+            )}
+
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     );

@@ -16,7 +16,13 @@ const LoginPage = () => {
     const handleLogin = async () => {
         const success = await loginWithEmail(email, password);
         if (success) {
-            navigate('/');
+            const userRole = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).role : null;
+
+            if (userRole === 'admin') {
+                navigate('/admin-view');
+            } else {
+                navigate('/');
+            }
         } else {
             alert('Invalid username or password');
         }
