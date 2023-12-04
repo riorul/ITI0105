@@ -1,11 +1,11 @@
 import React from 'react';
 
-const HomeSVG = ({ hovered }) => (
+const HomeSVG = ({ hovered, isAdmin=false }) => (
     <svg
         width="55" height="55"
         viewBox="0 0 55 55"
         fill="none"
-        className={`home-svg${hovered ? ' home-hovered' : ''}`}
+        className={`home-svg${hovered ? ' home-hovered' : ''}${isAdmin ? ' admin' : ''}`}
     >
         <path
             className="home-roof"

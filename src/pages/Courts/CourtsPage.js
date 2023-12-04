@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
+import UserHeader from '../../components/Header/UserHeader';
 import Footer from '../../components/Footer/Footer';
 import './CourtsPage.css';
 
-import RoundedButton from "../../components/buttons/RoundedButton";
+import RoundedButton from "../../components/Buttons/RoundedButton";
 import TextCard from "../../components/TextCards/TextCard";
 import ImageGallery from "../../components/ImageGallery/ImageGallery";
 const CourtsPage = () => {
@@ -63,7 +63,7 @@ const CourtsPage = () => {
 
     return (
         <div>
-            <Header title="Staadionid" homeIcon={true}/>
+            <UserHeader title="Staadionid" homeIcon={true}/>
 
             <h4 className="court-subtitles">Top tennisväljakute asukohad</h4>
 

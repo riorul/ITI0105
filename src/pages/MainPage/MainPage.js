@@ -1,20 +1,22 @@
-import Header from '../../components/Header/Header';
+import React from "react";
+import './MainPage.css';
+
+import UserHeader from '../../components/Header/UserHeader';
 import Footer from '../../components/Footer/Footer';
+
 import mainPageTennisImage from '../../assets/home/tennis_main.png';
 import introFirstImage from '../../assets/home/introfirst.png';
 import introSecondImage from '../../assets/home/introsecond.png';
 import introThirdImage from '../../assets/home/introthird.png';
-import './MainPage.css';
-
 import { ReactComponent as ContactSVG} from "../../assets/home/contact.svg"
 import { ReactComponent as AddSVG} from "../../assets/home/plussign.svg"
 import { ReactComponent as QuestionSVG} from "../../assets/home/questionmark.svg"
-import React from "react";
-const MainPage = () => {
 
+
+const MainPage = () => {
     return (
         <div>
-            <Header />
+            <UserHeader />
             <div className="image-container">
                 <img
                     src={mainPageTennisImage} // Replace with the actual URL of your image

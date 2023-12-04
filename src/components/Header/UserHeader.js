@@ -1,26 +1,34 @@
-import React, { useState } from 'react';
+import React, {useRef, useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import MenuSVG from '../../assets/header/MenuSVG';
 import MagnifierSVG from '../../assets/header/MagnifierSVG';
 import HomeSVG from '../../assets/header/HomeSVG';
-import SideMenu from '../SideMenu/SideMenu';
-import "./Header.css";
+import UserSideMenu from '../SideMenu/SideMenu';
+import "./HeaderUser.css";
+import "./HeaderCommon.css";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
-const Header = ({ title, homeIcon }) => {
+const UserHeader = ({ title, homeIcon, username }) => {
     const [isMenuHovered, setIsMenuHovered] = useState(false);
     const [isHomeHovered, setIsHomeHovered] = useState(false);
     const [isSearchHovered, setIsSearchHovered] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const username = "Rivo";
     const navigate = useNavigate();
+    const userHeaderRef = useRef();
+
+
+    useOutsideClick(userHeaderRef, () => setMenuOpen(false));
 
     const handleHover = (stateSetter) => () => stateSetter(true);
     const handleLeave = (stateSetter) => () => stateSetter(false);
-    const handleClick = (action) => () => action();
+    const handleClick = (action) => (e) => {
+        e.stopPropagation();
+        action();
+    };
     const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
     return (
-        <header>
+        <header ref={userHeaderRef}>
             <svg
                 className="background-svg"
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,13 +47,10 @@ const Header = ({ title, homeIcon }) => {
                 </defs>
             </svg>
 
-            <div className="header-text">
+            <div className="header-text user">
                 <div
                     className="menu-container"
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        toggleMenu();
-                    }}
+                    onClick={handleClick(toggleMenu)}
                     onMouseEnter={handleHover(setIsMenuHovered)}
                     onMouseLeave={handleLeave(setIsMenuHovered)}
                 >
@@ -104,9 +109,9 @@ const Header = ({ title, homeIcon }) => {
                 </div>
             </div>
 
-            <SideMenu isOpen={isMenuOpen} onClose={toggleMenu} userName={username}/>
+            <UserSideMenu isOpen={isMenuOpen} onClose={toggleMenu} userName={username}/>
         </header>
     );
 };
 
-export default Header;
+export default UserHeader;
