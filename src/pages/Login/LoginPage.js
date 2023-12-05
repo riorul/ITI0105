@@ -1,30 +1,40 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from "../../auth/AuthProvider";
 import "./Login.css"
 import { ReactComponent as FacebookLogo} from "../../assets/login/facebook.svg"
 import { ReactComponent as GoogleLogo} from "../../assets/login/google.svg"
 import { ReactComponent as FigmaLogo} from "../../assets/login/figma.svg"
-import RoundedButton from "../../components/buttons/RoundedButton";
+import RoundedButton from "../../components/Buttons/RoundedButton";
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const { loginWithEmail } = useAuth();
 
-    const handleLogin = () => {
-        if (email === 'rivo@gmail.com' && password === '1234') {
-            navigate('/');
+    const handleLogin = async () => {
+        const success = await loginWithEmail(email, password);
+        if (success) {
+            const userRole = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).role : null;
+
+            if (userRole === 'admin') {
+                navigate('/admin-view');
+            } else {
+                navigate('/');
+            }
         } else {
             alert('Invalid username or password');
         }
     };
+
     const handleWantsToRegister = () => {
         navigate('/register');
     }
 
     return (
         <div className="login-page">
-            <div className="left-section">
+            <div className="left-login-section">
                 <h2 className="left-heading">Fox Serve broneeringud</h2>
                 <div>
                     <h1 className="top-margin">Logi sisse oma kontosse</h1>
@@ -71,7 +81,7 @@ const LoginPage = () => {
                     <RoundedButton text={"Logi sisse"} />
                 </form>
             </div>
-            <div className="right-section">
+            <div className="right-login-section">
                 <div className="wave-container">
                     <svg
                     className="wave-svg"
