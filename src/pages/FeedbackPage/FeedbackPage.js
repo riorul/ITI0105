@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import InputField from '../../components/InputField/InputField';
-import FeedbackReturnButton from '../../components/buttons/FeedbackReturnButton';
+import ReturnHomeButton from '../../components/buttons/ReturnHomeButton';
 import './FeedbackPage.css';
 
 const FeedbackPage = () => {
@@ -38,8 +38,8 @@ const FeedbackPage = () => {
                             {isFeedbackSubmitted ? (
                                 <div>
                                     <p className="feedback-sent-text">Tagasiside saadetud!</p>
-                                    {/* Use the FeedbackReturnButton component */}
-                                    <FeedbackReturnButton text="Tagasi avalehele!" />
+                                    {/* Use the ReturnHomeButton component */}
+                                    <ReturnHomeButton text="Tagasi avalehele!" />
                                 </div>
                             ) : (
                             <form onSubmit={handleSubmit}>
@@ -99,7 +99,7 @@ const FeedbackPage = () => {
                                     <label>Tagasiside:</label>
                                     <textarea rows="4" value={feedback} onChange={e => setFeedback(e.target.value)} />
                                 </div>
-                                <div className="submit">
+                                <div className="feedback-submit">
                                     <input type="submit" value="Saada" />
                                 </div>
                             </form>
