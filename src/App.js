@@ -6,6 +6,7 @@ import RegisterPage from './pages/Register/RegisterPage';
 import BroneerimisPage from "./pages/Reserve/BroneerimisPage";
 import CourtsPage from "./pages/Courts/CourtsPage";
 import FeedbackPage from "./pages/FeedbackPage/FeedbackPage";
+import TrainingpartnerPage from "./pages/Trainingpartner/TrainingpartnerPage";
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/broneerimine" element={<BroneerimisPage />} />
             <Route path="/feedback" element={<FeedbackPage />} />
+            <Route path="/treeningpartner" element={<TrainingpartnerPage />} />
             <Route path="/" element={<MainPage />} />
             <Route path="*" element={<MainPage />} />
             <Route path="/staadionid" element={<CourtsPage />} />

@@ -20,7 +20,7 @@ label {
     font-weight: 700;
     line-height: normal;
 }
-.input-div {
+.input-field {
     display: flex;
     height: 60px;
     flex-direction: column;

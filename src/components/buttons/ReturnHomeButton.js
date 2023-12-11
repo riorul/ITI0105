@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './FeedbackReturnButton.css';
 
-const FeedbackReturnButton = ({ text }) => {
+const ReturnHomeButton = ({ text }) => {
     const navigate = useNavigate();
 
     const handleReturnToMain = () => {
@@ -21,4 +21,4 @@ const FeedbackReturnButton = ({ text }) => {
     );
 };
 
-export default FeedbackReturnButton;
+export default ReturnHomeButton;
