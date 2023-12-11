@@ -1,0 +1,49 @@
+.magnifier-link {
+    display: flex;
+    align-items: center;
+}
+
+.background-svg {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.magnifier-svg {
+    height: 7vh;
+    width: auto;
+    transition: fill 0.02ms, stroke 0.02ms;
+}
+
+.header-text.user {
+    top: 5px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clickable-area {
+    padding: 0 10px;
+}
+
+.magnifier-svg.search-hovered .magnifier-circle,
+.magnifier-svg.search-hovered .magnifier-line {
+    stroke: #A300CC;
+}
+
+.clickable-area:hover,
+.magnifier-link:hover,
+.clickable-area.search-hovered {
+    color: #A300CC;
+}
+
+.menu-svg.menu-hovered .line-menu-one,
+.menu-svg.menu-hovered .line-menu-two,
+.menu-svg.menu-hovered .line-menu-three,
+.home-svg.home-hovered .home-base,
+.home-svg.home-hovered .home-roof {
+    stroke: #A300CC;
+}

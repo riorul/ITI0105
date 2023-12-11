@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header/Header';
+import Header from '../../components/Header/UserHeader';
 import Footer from '../../components/Footer/Footer';
 import InputField from '../../components/InputField/InputField';
-import ReturnHomeButton from '../../components/buttons/ReturnHomeButton';
+import ReturnHomeButton from '../../components/Buttons/ReturnHomeButton';
 import StarRating from '../../components/StarRating/StarRating';
 import './TrainingpartnerPage.css';
 
