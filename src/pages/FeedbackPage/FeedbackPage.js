@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/UserHeader';
 import Footer from '../../components/Footer/Footer';
 import InputField from '../../components/InputField/InputField';
-import FeedbackReturnButton from '../../components/Buttons/FeedbackReturnButton';
 import './FeedbackPage.css';
+import ReturnHomeButton from "../../components/Buttons/ReturnHomeButton";
 
 const FeedbackPage = () => {
     const [name, setName] = useState('');
@@ -39,8 +39,8 @@ const FeedbackPage = () => {
                             {isFeedbackSubmitted ? (
                                 <div>
                                     <p className="feedback-sent-text">Tagasiside saadetud!</p>
-                                    {/* Use the FeedbackReturnButton component */}
-                                    <FeedbackReturnButton text="Tagasi avalehele!" />
+                                    {/* Use the ReturnHomeButton component */}
+                                    <ReturnHomeButton text="Tagasi avalehele!" />
                                 </div>
                             ) : (
                             <form onSubmit={handleSubmit}>
@@ -100,7 +100,7 @@ const FeedbackPage = () => {
                                     <label>Tagasiside:</label>
                                     <textarea rows="4" value={feedback} onChange={e => setFeedback(e.target.value)} />
                                 </div>
-                                <div className="submit">
+                                <div className="feedback-submit">
                                     <input type="submit" value="Saada" />
                                 </div>
                             </form>

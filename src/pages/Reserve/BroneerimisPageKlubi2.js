@@ -1,9 +1,9 @@
 import React from 'react';
 import "./BroneerimisPage.css"
 import "../Login/Login.css"
-import RoundedButton from "../../components/buttons/RoundedButton";
+import RoundedButton from "../../components/Buttons/RoundedButton";
 import { useNavigate } from 'react-router-dom';
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header/UserHeader";
 import Footer from "../../components/Footer/Footer";
 const BroneerimisPage = () => {
     const navigate = useNavigate();

@@ -1,0 +1,191 @@
+.left-training-section {
+    display: inline-flex;
+    height: 50%;
+    width: 400px;
+    padding: 200px 40px 100px 40px; /* Adjust the bottom padding to move the content up */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 70px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+    left: 10%; /* Move 10% to the right */
+}
+
+.form-section {
+    width: 90%; /* Muuda laiust 70% */
+}
+
+.form-section label {
+    font-family: 'Montserrat', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #9747FF;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.name-input,
+.email-input {
+    margin-bottom: 60px; /* Set a common margin-bottom for all input fields */
+    position: relative; /* Add relative positioning to the input container */
+}
+
+.name-input .input-icon,
+.email-input .input-icon {
+    position: absolute;
+    left: 10px; /* Adjust the position as needed */
+    top: 80%; /* Adjust the vertical position */
+    transform: translateY(-50%);
+}
+
+.name-input input[type='text'],
+.email-input input[type='text'] {
+    /* Add padding to the left to create space for the icon */
+    padding-left: 40px; /* Adjust the value as needed */
+
+    /* Use text-indent to indent the text to start after the icon */
+    text-indent: 0; /* Reset text-indent */
+}
+
+/* For the name input */
+.name-input input[type='text']::placeholder {
+    /* Styles for the placeholder */
+    /* Add padding to the left to create space for the icon */
+    padding-left: 0; /* Adjust the value as needed */
+}
+
+/* For the email input */
+.email-input input[type='text']::placeholder {
+    /* Add padding to the left to move the placeholder text to the right */
+    padding-left: 0; /* Adjust the value as needed */
+}
+
+.form-section input[type='submit'] {
+    width: 290px; /* Adjust the width */
+    height: 45px;
+    padding: 7px 11px;
+    border-radius: 8px;
+    background: #C289FC;
+    color: #FFFFFF;
+    font-family: 'Montserrat', serif;
+    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.40);
+    margin-top: 60px; /* Adjust the margin-top */
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    text-align: center; /* Align text horizontally */
+}
+
+.form-section .comments-input {
+    margin-top: 60px; /* Adjust the margin-top to move the comments textarea down */
+}
+.form-section .comments-input textarea {
+    width: 100%;
+    height: 200%;
+    border-radius: 9px;
+    border: 1px solid #888888;
+    background: #FFFFFF;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.18);
+}
+
+.form-section input[type='submit']:hover {
+    cursor: pointer;
+    background: #9747FF;
+}
+
+
+.right-training-section {
+    width: 1100px; /* Adjusted width */
+    height: 900px; /* Adjusted height */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+    color: #9747FF;
+    white-space: nowrap;
+    transform: translateX(0%);
+    border-color: #FFFFFF; /* Border color same as left-feedback-section */
+    border-radius: 8px;
+    border-width: 4px; /* Adjusted border width */
+    border-style: solid; /* Ensuring border style is set */
+    background-color: #FFFFFF; /* Same as the left-feedback-section */
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); /* Similar shadow effect */
+    position: relative; /* Adding relative positioning */
+    left: 20%;
+    /* Move 5% to the right */
+}
+
+.right-training-section .text-feedback {
+    position: absolute;
+    width: 800px; /* Adjusted text width */
+    height: auto; /* Changed to auto for dynamic height */
+    flex-shrink: 0;
+    left: 100px; /* Adjusted to move 54px to the right */
+    top: 20%; /* Adjusted to move 20% downwards */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px; /* Increased font size by 30% */
+    color: #9747FF;
+    white-space: normal; /* Allowing for multiple lines when necessary */
+    transform: translateX(0%);
+}
+
+/* Styles for the return home button */
+.return-home-button-wrapper {
+    /* Your specific styles for this button on TrainingpartnerPage */
+    width: 150px; /* Adjusted button width */
+    height: 35px; /* Adjusted button height */
+    border: none;
+    border-radius: 8px;
+    background-color: #C289FC;
+    color: #FFFFFF;
+    font-family: 'Montserrat', serif;
+    font-weight: 600;
+    font-size: 14px; /* Adjusted font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Adjust the top value to move the button downwards */
+    margin-top: 200px;
+    position: absolute; /* Change position to absolute */
+}
+
+.training-return-home-button:hover {
+    background-color: #9747FF; /* Change background color on hover */
+}
+.left-training-section .training-form-submitted-text {
+    font-family: 'Montserrat', serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: #9747FF;
+    margin-bottom: 20px;
+    position: relative; /* Set position to relative */
+    top: -300px; /* Adjust the value to move the text up or down */
+}
+.star-rating-section {
+    /* Your styles for the star rating section */
+    /* Adjust positioning as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px; /* Adjust the top margin to move the star rating section down */
+}
+
+.star-rating-section label {
+    /* Your label styles */
+    /* Adjust as needed */
+    font-size: 18px; /* Increased font size */
+    color: #9747FF; /* Changed label color */
+    margin-bottom: 5px; /* Added margin bottom */
+}
+
+.star-rating-section .star-rating {
+    /* Your star rating styles */
+    /* Adjust as needed */
+    margin-top: 10px;
+    font-size: 2em;
+}
