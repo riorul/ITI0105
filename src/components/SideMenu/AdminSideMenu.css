@@ -1,0 +1,23 @@
+.side-menu.admin {
+    background: linear-gradient(to right, #000000 0%,  #2D2937 45%, #42385E 100%);
+}
+
+.admin-profile-container {
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-profile-picture {
+    width: 20vh;
+    height: auto;
+}
+
+.admin-user {
+    margin-left: 5%;
+    font-weight: bolder;
+    font-size: 4vh;
+    color: white;
+}

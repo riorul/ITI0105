@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header/Header';
+import Header from '../../components/Header/UserHeader';
 import Footer from '../../components/Footer/Footer';
 import InputField from '../../components/InputField/InputField';
 import './FeedbackPage.css';
+import ReturnHomeButton from "../../components/Buttons/ReturnHomeButton";
 
 const FeedbackPage = () => {
     const [name, setName] = useState('');
@@ -10,19 +11,20 @@ const FeedbackPage = () => {
     const [phone, setPhone] = useState('');
     const [feedback, setFeedback] = useState('');
     const [rating, setRating] = useState(3);
-
+    const [isFeedbackSubmitted, setIsFeedbackSubmitted] = useState(false);
     const handleRatingChange = (event) => {
         setRating(parseInt(event.target.value));
     };
-
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(name, email, phone, feedback);
+        setIsFeedbackSubmitted(true);
     };
+
 
     return (
         <div className="page-container">
-            <Header />
+            <Header title="Tagasiside vorm" homeIcon={true}/>
             <div className="container">
                 <div className="left-feedback-section">
                     <div className="ellipse-131"></div>
@@ -34,6 +36,13 @@ const FeedbackPage = () => {
                 <div className="right-feedback-section">
                     <div className="feedback">
                         <div className="content">
+                            {isFeedbackSubmitted ? (
+                                <div>
+                                    <p className="feedback-sent-text">Tagasiside saadetud!</p>
+                                    {/* Use the ReturnHomeButton component */}
+                                    <ReturnHomeButton text="Tagasi avalehele!" />
+                                </div>
+                            ) : (
                             <form onSubmit={handleSubmit}>
                                 <div className="name_input">
                                     <InputField
@@ -84,17 +93,18 @@ const FeedbackPage = () => {
                                         min="1"
                                         max="5"
                                         value={rating}
-                                        className="slider"
+                                        className="rating-scale"
                                     />
                                 </div>
                                 <div className="feedback_input">
                                     <label>Tagasiside:</label>
                                     <textarea rows="4" value={feedback} onChange={e => setFeedback(e.target.value)} />
                                 </div>
-                                <div className="submit">
+                                <div className="feedback-submit">
                                     <input type="submit" value="Saada" />
                                 </div>
                             </form>
+                            )}
                         </div>
                     </div>
                 </div>

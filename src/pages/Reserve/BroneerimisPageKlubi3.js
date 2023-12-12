@@ -1,31 +1,48 @@
 import React from 'react';
 import "./BroneerimisPage.css"
-import MainPage from "../MainPage/MainPage";
 import "../Login/Login.css"
+import Header from '../../components/Header/UserHeader';
+import Footer from '../../components/Footer/Footer'
+import RoundedButton from "../../components/Buttons/RoundedButton";
+import { useNavigate } from 'react-router-dom';
 const BroneerimisPage = () => {
+    const navigate = useNavigate();
     return (
         <div>
-            <h1 align="center">Broneerimine</h1>
-            <p align="center">Welcome to Klubi3!</p>
+            <Header title="Broneeri" homeIcon={true}/>
+            <h2 align="center">Welcome to Klubi 3!</h2>
             <p align="center">
-                <a href={MainPage} target={"_blank"}>
-                    <button>Avalehele tagasi!</button>
-                </a>
+                <RoundedButton
+                    text={"Avalehele tagasi!"}
+                    onClick={()=> navigate("/")}
+                />
             </p>
             <table align="center">
                 <tbody>
                     <tr>
                         <th bgcolor="#ffb6c1">
-                            <a href="BroneerimisPage.js" target="_blank">Klubi 1</a>
+                            <RoundedButton
+                                text={"Klubi 1"}
+                                onClick={()=> navigate("/Klubi1")}
+                            />
                         </th>
                         <th bgcolor="#ffb6c1">
-                            <a href="BroneerimisPageKlubi2.js" target="_blank">Klubi 2</a>
+                            <RoundedButton
+                                text={"Klubi 2"}
+                                onClick={()=> navigate("/Klubi2")}
+                            />
                         </th>
                         <th bgcolor="#FFEEFD">
-                            <a href="BroneerimisPageKlubi3.js" target="_blank">Klubi 3</a>
+                            <RoundedButton
+                                text={"Klubi 3"}
+                                onClick={()=> navigate("/Klubi3")}
+                            />
                         </th>
                         <th bgcolor="#ffb6c1">
-                            <a href="BroneerimisPageKlubi4.js" target="_blank">Klubi 4</a>
+                            <RoundedButton
+                                text={"Klubi 4"}
+                                onClick={()=> navigate("/Klubi4")}
+                            />
                         </th>
                     </tr>
                 </tbody>
@@ -56,7 +73,7 @@ const BroneerimisPage = () => {
                 </tr>
                 <tr>
                     <td>8:30</td>
-                    <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
+                    <td bgcolor="#adff2f"><button1>+</button1></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
                     <td bgcolor="lightcoral"><broneeritud>Broneeritud</broneeritud></td>
@@ -318,8 +335,14 @@ const BroneerimisPage = () => {
             </table>
             <br></br>
             <br></br>
+            <p align="center">
+                <RoundedButton
+                    text={"Kinnita!"}
+                />
+            </p>
             <br></br>
             <br></br>
+            <Footer />
         </div>
     );
 };

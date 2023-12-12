@@ -1,0 +1,30 @@
+.return-button {
+    margin-top: 20px;
+}
+
+/* Style for the button */
+.custom-button {
+    border-radius: 10px;
+    background: #C289FC;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    width: 802px;
+    height: 164px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    font-family: 'Montserrat', serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.custom-button:hover {
+    background: #9747FF; /* Darker green on hover */
+}
