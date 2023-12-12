@@ -42,7 +42,7 @@ const SideMenu = ({ isOpen, onClose, userName = "Guest" }) => {
 
             <div className="navigation-side-menu">
                 <div>
-                    <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/broneeri")}>
+                    <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/broneerimine")}>
                         Broneeri
                     </div>
                     <div className="clickable-area side-menu-buttons text-container" onClick={() => navigate("/staadionid")}>
