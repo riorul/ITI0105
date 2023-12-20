@@ -30,6 +30,6 @@ const customLocale = {
 };
 
 // Create a localizer with the custom moment locale
-const localizer = momentLocalizer(moment, customLocale);
+export const localizer = momentLocalizer(moment, customLocale);
 
 export default localizer;

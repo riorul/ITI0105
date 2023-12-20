@@ -63,13 +63,13 @@ const CustomToolbar = ({ label, onView, onNavigate }) => (
         {/* Grouping the first 3 buttons */}
         <div className="first-three-buttons">
             <button type="button" onClick={() => onNavigate('TODAY')}>
-                Today
+                {customToolbarMessages.today}
             </button>
             <button type="button" onClick={() => onNavigate('PREV')}>
-                Previous
+                {customToolbarMessages.previous}
             </button>
             <button type="button" onClick={() => onNavigate('NEXT')}>
-                Next
+                {customToolbarMessages.next}
             </button>
         </div>
         {/* Month/year label */}
@@ -79,16 +79,16 @@ const CustomToolbar = ({ label, onView, onNavigate }) => (
         {/* Grouping the last 4 buttons */}
         <div className="last-four-buttons">
             <button type="button" onClick={() => onView('month')}>
-                Month
+                {customToolbarMessages.month}
             </button>
             <button type="button" onClick={() => onView('week')}>
-                Week
+                {customToolbarMessages.week}
             </button>
             <button type="button" onClick={() => onView('day')}>
-                Day
+                {customToolbarMessages.day}
             </button>
             <button type="button" onClick={() => onView('agenda')}>
-                Agenda
+                {customToolbarMessages.agenda}
             </button>
         </div>
     </div>
