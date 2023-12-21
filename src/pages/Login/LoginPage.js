@@ -60,9 +60,9 @@ const LoginPage = () => {
                 </div>
 
                 <div className="divider">
-                    <div className="line"></div>
+                    <div className="line line-without-margin"></div>
                     <div className="or">või</div>
-                    <div className="line"></div>
+                    <div className="line line-without-margin"></div>
                 </div>
 
                 <form onSubmit={handleLogin}>
