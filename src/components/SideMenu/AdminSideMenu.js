@@ -25,15 +25,9 @@ const AdminSideMenu = ({ isOpen }) => {
                 <div>
                     <div
                         className="clickable-area side-menu-buttons text-container"
-                        onClick={() => handleNavigation('/admin/kasutajad')}
+                        onClick={() => handleNavigation('/admin-view')}
                     >
                         Kasutajad
-                    </div>
-                    <div
-                        className="clickable-area side-menu-buttons text-container"
-                        onClick={() => handleNavigation('/admin/andmed')}
-                    >
-                        Andmed
                     </div>
                 </div>
 

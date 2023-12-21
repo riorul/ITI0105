@@ -1,0 +1,92 @@
+.information-card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.information-card {
+    background: white;
+    width: 816px;
+    height: 519px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-card-titles {
+    font-size: 15px;
+}
+
+.elevated-info {
+    margin: 20px;
+    height: 80%;
+    width: 70%;
+    flex: 2;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.image-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.profile-svg.inverted {
+    width: 90%;
+    filter: invert(1);
+}
+
+.rounded-box {
+    font-size: 20px;
+    margin: 8px;
+    background-color: #fff;
+    padding: 5px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.info-field {
+    border: black;
+    margin-bottom: 10px;
+}
+
+.ok-button {
+    width: 80%;
+    margin-top: 90px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #282c34;
+    color: white;
+}
+
+.ok-button:hover {
+    background-color: #808080;
+}

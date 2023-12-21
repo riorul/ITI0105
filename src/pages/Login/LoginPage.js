@@ -13,18 +13,23 @@ const LoginPage = () => {
     const navigate = useNavigate();
     const { loginWithEmail } = useAuth();
 
-    const handleLogin = async () => {
-        const success = await loginWithEmail(email, password);
-        if (success) {
-            const userRole = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).role : null;
+    const handleLogin = async (event) => {
+        try {
+            event.preventDefault();
+            const success = await loginWithEmail(email, password);
 
-            if (userRole === 'admin') {
-                navigate('/admin-view');
+            if (success) {
+                const userRole = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).role : null;
+                if (userRole === 'admin') {
+                    navigate('/admin-view');
+                } else {
+                    navigate('/');
+                }
             } else {
-                navigate('/');
+                alert('Invalid username or password');
             }
-        } else {
-            alert('Invalid username or password');
+        } catch (error) {
+            console.error('Error during login:', error.message);
         }
     };
 
@@ -53,30 +58,29 @@ const LoginPage = () => {
                         </a>
                     </div>
                 </div>
+
                 <div className="divider">
                     <div className="line"></div>
                     <div className="or">või</div>
                     <div className="line"></div>
                 </div>
-                <form onSubmit={handleLogin}>
-                    <div>
-                        <div>
 
-                            <input type="email"
-                                   id="email"
-                                   name="email"
-                                   placeholder="Email"
-                                   value={email}
-                                   onChange={(e) => setEmail(e.target.value)}/>
-                        </div>
-                        <div>
-                            <input type="password"
-                                   id="password-input"
-                                   name="password"
-                                   placeholder="Password"
-                                   value={password}
-                                   onChange={(e) => setPassword(e.target.value)}/>
-                        </div>
+                <form onSubmit={handleLogin}>
+                    <div className="login-input-field">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}/>
+                        <input
+                            type="password"
+                            id="password-input"
+                            name="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}/>
                     </div>
                     <RoundedButton text={"Logi sisse"} />
                 </form>

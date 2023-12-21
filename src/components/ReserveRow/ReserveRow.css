@@ -1,0 +1,23 @@
+.box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: purple;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    margin: 10px;
+}
+
+button {
+    flex: 1;
+    color: white;
+    background-color: #C184FE;
+    margin: 0 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;/* Smooth transition for color change */
+}
+
+.clicked {
+    background-color: green;
+}
