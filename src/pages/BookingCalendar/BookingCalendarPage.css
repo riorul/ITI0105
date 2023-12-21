@@ -1,0 +1,80 @@
+.booking-calendar-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure the page spans between header and footer */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    /* Adjust these properties based on your layout */
+    width: 100%; /* Take full width */
+    max-width: 100%; /* Prevent content overflow */
+}
+
+.left-section {
+    /* Define styles for the left section */
+    /* Adjust width and other properties as needed */
+    width: 30%; /* Set the width of the left section */
+    overflow: auto; /* Enable horizontal scrolling if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Add any additional styles for the left section */
+}
+
+.right-section {
+    /* Define styles for the right section */
+    /* Adjust width and other properties as needed */
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px; /* Add space above the calendar */
+    /* Add any additional styles for the right section */
+}
+
+
+.primary {
+    color: #B232A6;
+}
+
+.selected {
+    background-color: #ED82FF;
+    color: #FFFFFF;
+}
+
+.custom-toolbar {
+    /* Add styles for the custom toolbar container if needed */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: space-between; /* Aligns groups of buttons */
+    align-items: center; /* Vertically center the content */
+    margin-bottom: 10px; /* Adjust spacing between buttons and calendar */
+}
+
+/* Style for the individual button */
+.custom-toolbar button {
+    width: 100px; /* Adjust the button width */
+    height: 30px; /* Adjust the button height */
+    background-color: #FFEEFD;
+    border: none;
+    border-radius: 15px;
+    font-size: 12px; /* Adjust the font size */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+    margin-bottom: 5px; /* Add spacing between button groups */
+}
+
+/* Style for the month/year text */
+.rbc-toolbar-label {
+    font-size: 18px; /* Adjust the font size for the month/year text */
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+    background-color: #FFEEFD;/* Add spacing between button groups */
+}

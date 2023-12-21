@@ -7,6 +7,7 @@ import RegisterPage from './pages/Register/RegisterPage';
 import CourtsPage from "./pages/Courts/CourtsPage";
 import FeedbackPage from "./pages/FeedbackPage/FeedbackPage";
 import TrainingpartnerPage from "./pages/Trainingpartner/TrainingpartnerPage";
+import BookingcalendarPage from "./pages/BookingCalendar/BookingCalendarPage";
 import BroneerimisPage from "./pages/Reserve/BroneerimisPage";
 import BroneerimisPageKlubi2 from "./pages/Reserve/BroneerimisPageKlubi2";
 import BroneerimisPageKlubi3 from "./pages/Reserve/BroneerimisPageKlubi3";
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/feedback" element={<FeedbackPage />} />
             <Route path="/treeningpartner" element={<TrainingpartnerPage />} />
             <Route path="/staadionid" element={<CourtsPage />} />
+            <Route path="/kalender" element={<BookingcalendarPage />} />
             <Route path="/Klubi1" element={<BroneerimisPage />} />
             <Route path="/Klubi2" element={<BroneerimisPageKlubi2 />} />
             <Route path="/Klubi3" element={<BroneerimisPageKlubi3 />} />
