@@ -1,5 +1,6 @@
 .header-text.admin {
     background: black;
+    position: relative;
 }
 
 .menu-svg.menu-hovered.admin .line-menu-one,

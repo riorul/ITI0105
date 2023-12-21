@@ -1,0 +1,66 @@
+.confirmation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.confirmation-box {
+    background: white;
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners with radius 20 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Ensure the border-radius is applied correctly */
+}
+
+.confirmation-top {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.confirmation-bottom {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cancel-button,
+.delete-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.cancel-button {
+    background-color: black;
+    color: white;
+    margin-right: 5px;
+}
+
+.cancel-button:hover {
+    background-color: #333; /* Darken the color on hover */
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    margin-left: 5px;
+}
+
+.delete-button:hover {
+    background-color: #cc0000; /* Darken the color on hover */
+}
+
+/* Add any additional styling as needed */

@@ -5,6 +5,7 @@ import Header from '../../components/Header/UserHeader';
 import Footer from '../../components/Footer/Footer'
 import RoundedButton from "../../components/Buttons/RoundedButton";
 import { useNavigate } from 'react-router-dom';
+import UserDetails from "../../components/ReserveRow/ReserveRow";
 const BroneerimisPage = () => {
     const navigate = useNavigate();
     return (

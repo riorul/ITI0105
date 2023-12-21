@@ -1,0 +1,32 @@
+.static-user-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #282c34;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.static-profile-box {
+    flex: 1;
+    margin: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+}
+
+.static-profile-box:nth-child(-n+2) {
+    justify-content: flex-start;
+}
+
+
+/* Center align the rest of the profile boxes */
+.static-profile-box:not(:nth-child(-n+2)) {
+    justify-content: right;
+}
