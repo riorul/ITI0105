@@ -57,6 +57,8 @@
     width: 100%;
 }
 
+
+
 input[type="email"],
 input[type="text"],
 input[type="password"] {
@@ -88,6 +90,9 @@ input[type="password"] {
     flex-grow: 1;
     height: 2px;
     background-color: #ED82FF;
+}
+
+.line-without-margin {
     margin: 0 30px;
 }
 

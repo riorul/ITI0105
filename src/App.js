@@ -36,7 +36,7 @@ const App = () => {
             <Route path="/treeningpartner" element={<TrainingpartnerPage />} />
             <Route path="/staadionid" element={<CourtsPage />} />
             <Route path="/kalender" element={<BookingcalendarPage />} />
-            <Route path="/Klubi1" element={<BroneerimisPage />} />
+            <Route path="/broneerimine" element={<BroneerimisPage />} />
             <Route path="/Klubi2" element={<BroneerimisPageKlubi2 />} />
             <Route path="/Klubi3" element={<BroneerimisPageKlubi3 />} />
             <Route path="/Klubi4" element={<BroneerimisPageKlubi4 />} />

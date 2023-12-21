@@ -3,4 +3,7 @@
   <component name="GitLabDefaultAccount">
     <option name="defaultAccountId" value="3a0d838f-6aae-4c2f-b30b-d275fe5a547f" />
   </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="FLOW" />
+  </component>
 </project>
